@@ -1,0 +1,237 @@
+sploosh_o_matic: &sploosh_o_matic
+  name: ボールドマーカー
+  sub: カーリングボム
+  special: ウルトラハンコ
+
+splattershot_jr: &splattershot_jr
+  name: わかばシューター
+  sub: スプラボム
+  special: グレートバリア
+
+splash_o_matic: &splash_o_matic
+  name: シャープマーカー
+  sub: クイックボム
+  special: カニタンク
+
+aerosparay_mg: &aerosparay_mg
+  name: プロモデラーMG
+  sub: タンサンボム
+  special: サメライド
+
+splattershot: &splattershot
+  name: スプラシューター
+  sub: キューバンボム
+  special: ウルトラショット
+
+52_gal: &52_gal
+  name: .52ガロン
+  sub: スプラッシュシールド
+  special: メガホンレーザー5.1ch
+
+n_zap_85: &n_zap_85
+  name: N-ZAP '85
+  sub: キューバンボム
+  special: エナジースタンド
+
+splattershot_pro: &splattershot_pro
+  name: プライムシューター
+  sub: ラインマーカー
+  special: カニタンク
+
+96_gal: &96_gal
+  name: .96ガロン
+  sub: スプリンクラー
+  special: キューインキ
+
+jet_squelcher: &jet_squelcher
+  name: ジェットスイーパー
+  sub: ラインマーカー
+  special: キューインキ
+
+l_3_nozzlenose: &l_3_nozzlenose
+  name: L3リールガン
+  sub: カーリングボム
+  special: カニタンク
+
+h_3_nozzlenose: &h_3_nozzlenose
+  name: H3リールガン
+  sub: ポイントセンサー
+  special: エナジースタンド
+
+squeezer: &squeezer
+  name: ボトルガイザー
+  sub: スプラッシュシールド
+  special: ウルトラショット
+
+
+carbon_roller: &carbon_roller
+  name: カーボンローラー
+  sub: ロボットボム
+  special: ショクワンダー
+
+splatroller: &splatroller
+  name: スプラローラー
+  sub: カーリングボム
+  special: グレートバリア
+
+dynamo_roller: &dynamo_roller
+  name: ダイナモローラー
+  sub: スプリンクラー
+  special: エナジースタンド
+
+flingza_roller: &flingza_roller
+  name: ヴァリアブルローラー
+  sub: トラップ
+  special: マルチミサイル
+
+
+classic_squiffer: &classic_squiffer
+  name: スクイックリン
+  sub: ポイントセンサー
+  special: グレートバリア
+
+splat_charger: &splat_charger
+  name: スプラチャージャー
+  sub: スプラボム
+  special: キューインキ
+
+splatterscope: &splatterscope
+  name: スプラスコープ
+  sub: スプラボム
+  special: キューインキ
+
+e_liter_4k: &e_liter_4k
+  name: リッター4K
+  sub: トラップ
+  special: ホップソナー
+
+e_liter_4K_scope: &e_liter_4K_scope
+  name: 4Kスコープ
+  sub: トラップ
+  special: ホップソナー
+
+bamboozler_14_mk_1: &bamboozler_14_mk_1
+  name: 14式竹筒銃・甲
+  sub: ロボットボム
+  special: メガホンレーザー5.1ch
+
+goo_tuber: &goo_tuber
+  name: ソイチューバー
+  sub: トーピード
+  special: マルチミサイル
+
+
+slosher: &slosher
+  name: バケットスロッシャー
+  sub: キューバンボム
+  special: トリプルトルネード
+
+tri_slocher: &tri_slocher
+  name: ヒッセン
+  sub: ポイズンミスト
+  special: ジェットパック
+
+sloshing_machine: &sloshing_machine
+  name: スクリュースロッシャー
+  sub: タンサンボム
+  special: ナイスダマ
+
+bloblobber: &bloblobber
+  name: オーバーフロッシャー
+  sub: スプリンクラー
+  special: アメフラシ
+
+explosher: &explosher
+  name: エクスプロッシャー
+  sub: ポイントセンサー
+  special: アメフラシ
+
+
+mini_splatling: &mini_splatling
+  name: スプラスピナー
+  sub: クイックボム
+  special: ウルトラハンコ
+
+heavy_splatling: &heavy_splatling
+  name: バレルスピナー
+  sub: スプリンクラー
+  special: ホップソナー
+
+hydra_splatling: &hydra_splatling
+  name: ハイドラント
+  sub: ロボットボム
+  special: ナイスダマ
+
+ballpoint_splatling: &ballpoint_splatling
+  name: クーゲルシュライバー
+  sub: タンサンボム
+  special: ジェットパック
+
+nautilus_47: &nautilus_47
+  name: ノーチラス47
+  sub: ポイントセンサー
+  special: アメフラシ
+
+
+luna_blaster: &luna_blaster
+  name: ノヴァブラスター
+  sub: スプラボム
+  special: ショクワンダー
+
+blaster: &blaster
+  name: ホットブラスター
+  sub: ロボットボム
+  special: グレートバリア
+
+range_blaster: &range_blaster
+  name: ロングブラスター
+  sub: キューバンボム
+  special: ホップソナー
+
+clash_blaster: &clash_blaster
+  name: クラッシュブラスター
+  sub: スプラボム
+  special: ウルトラショット
+
+rapid_blaster: &rapid_blaster
+  name: ラピッドブラスター
+  sub: トラップ
+  special: トリプルトルネード
+
+rapid_blaster_pro: &rapid_blaster_pro
+  name: Rブラスターエリート
+  sub: ポイズンミスト
+  special: キューインキ
+
+
+inkbrush: &inkbrush
+  name: パブロ
+  sub: スプラボム
+  special: メガホンレーザー5.1ch
+
+octobrush: &octobrush
+  name: ホクサイ
+  sub: キューバンボム
+  special: ショクワンダー
+
+
+tri_stringer: &tri_stringer
+  name: トライストリンガー
+  sub: ポイズンミスト
+  special: メガホンレーザー5.1ch
+
+reef_lux_450: &reef_lux_450
+  name: LACT-450
+  sub: カーリングボム
+  special: マルチミサイル
+
+
+splatana_stamper: &splatana_stamper
+  name: ジムワイパー
+  sub: クイックボム
+  special: ショクワンダー
+
+splatana_wiper: &splatana_wiper
+  name: ドライブワイパー
+  sub: トーピード
+  special: ウルトラハンコ

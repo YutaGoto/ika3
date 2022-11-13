@@ -1,0 +1,41 @@
+splat_bomb: &splat_bomb
+  name: スプラボム
+
+suction_bomb: &suction_bomb
+  name: キューバンボム
+
+curing_bomb: &curing_bomb
+  name: カーリングボム
+
+burst_bomb: &burst_bomb
+  name: クイックボム
+
+autobomb: &autobomb
+  name: ロボットボム
+
+ink_mine: &ink_mine
+  name: トラップ
+
+toxic_mist: &toxic_mist
+  name: ポイズンミスト
+
+point_sensor: &point_sensor
+  name: ポイントセンサー
+
+splash_wall: &splash_wall
+  name: スプラッシュシールド
+
+sprinkler: &sprinkler
+  name: スプリンクラー
+
+squid_beacon: &squid_beacon
+  name: ジャンプビーコン
+
+fizzy_bomb: &fizzy_bomb
+  name: タンサンボム
+
+torpedo: &torpedo
+  name: トーピード
+
+angle_shooter: &angle_shooter
+  name: ラインマーカー
