@@ -42,6 +42,16 @@ module Ika3
         config.values.filter{|weapon| weapon[:sub] == sub_name}
       end
 
+      def reload_config!
+        @cache = {}
+        @config = nil
+        @config_sub_weapons = nil
+        config
+        config_sub_weapons
+      end
+
+      private
+
       def names
         config.keys
       end
@@ -82,14 +92,6 @@ module Ika3
 
       def valid?(weapon_key)
         names.include?(weapon_key)
-      end
-
-      def reload_config!
-        @cache = {}
-        @config = nil
-        @config_sub_weapons = nil
-        config
-        config_sub_weapons
       end
     end
   end

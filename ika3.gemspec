@@ -32,7 +32,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "activesupport", ">= 5.0.0"
   spec.add_dependency "hashie", ">= 2.0.5"
-  spec.add_dependency "sengiri_yaml", ">= 1.0.0"
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
