@@ -1,0 +1,33 @@
+module Ika3
+  class Weapon < Hash
+    include Hashie::Extensions::MethodAccess
+
+    ATTRIBUTES: ::Array[:name | :sub | :special]
+
+    attr_accessor io: untyped
+
+    include Ika3::Concerns::Utils
+
+    def self.find: (untyped weapon_key) -> untyped
+
+    def self.find_by_name: (untyped weapon_name) -> untyped
+
+    def self.filter_by_sub: (untyped sub_name) -> untyped
+
+    def self.reload_config!: () -> untyped
+
+    private
+
+    def self.names: () -> Array[Symbol]
+
+    def self.weapons: () -> Array[Object]
+
+    def self.sub_weapons: () -> Array[Object]
+
+    def self.config: () -> untyped
+
+    def self.config_sub_weapons: () -> untyped
+
+    def self.valid?: (untyped weapon_key) -> bool
+  end
+end

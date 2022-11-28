@@ -30,14 +30,14 @@ module Ika3
       end
 
       def find_by_name(weapon_name)
-        raise "unknown weapon: #{weapon_name}" unless weapon_names.values.include?(weapon_name)
+        raise "unknown weapon: #{weapon_name}" unless weapons.values.include?(weapon_name)
 
-        key = weapon_names.key(weapon_name)
+        key = weapons.key(weapon_name)
         find(key)
       end
 
       def filter_by_sub(sub_name)
-        raise "unknown sub weapon: #{sub_name}" unless sub_weapon_names.values.include?(sub_name)
+        raise "unknown sub weapon: #{sub_name}" unless sub_weapons.values.include?(sub_name)
 
         config.values.filter{|weapon| weapon[:sub] == sub_name}
       end
@@ -56,7 +56,7 @@ module Ika3
         config.keys
       end
 
-      def weapon_names
+      def weapons
         @weapon_hash ||= {}
         if @weapon_hash.empty?
           config.each do |key, value|
@@ -66,7 +66,7 @@ module Ika3
         @weapon_hash
       end
 
-      def sub_weapon_names
+      def sub_weapons
         @sub_weapon_hash ||= {}
         if @sub_weapon_hash.empty?
           config_sub_weapons.each do |key, value|
