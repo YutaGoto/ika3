@@ -21,12 +21,6 @@ jobs:
       - run:
           name: run rspec
           command: bundle e rspec
-      - run:
-          name: rbs collection
-          command: bundle e rbs collection install
-      - run:
-          name: steep check
-          command: bundle e steep check
       - slack/notify:
           event: fail
           template: basic_fail_1
@@ -37,7 +31,7 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+  build: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - test:
