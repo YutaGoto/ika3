@@ -18,7 +18,9 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - ruby/rspec-test
+      - run:
+          name: run rspec
+          command: bundle e rspec
       - run:
           name: rbs collection
           command: bundle e rbs collection install
