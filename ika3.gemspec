@@ -8,11 +8,11 @@ Gem::Specification.new do |spec|
   spec.authors = ["YutaGoto"]
   spec.email = ["you.goto.510@gmail.com"]
 
-  spec.summary = "いか3"
-  spec.description = "いか3"
+  spec.summary = "Splatoon3 weapons infomation library."
+  spec.description = "Splatoon3 weapons infomation library. This gem provide weapon name, sub, and special. not official"
   spec.homepage = "https://github.com/YutaGoto/ika3"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
