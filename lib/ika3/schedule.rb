@@ -14,6 +14,22 @@ module Ika3
         @regular_now_obj ||= send_request(:get, "/api/regular/now").body.results[0]
       end
 
+      def bankara_challenge_now
+        @bankara_challenge_now ||= send_request(:get, "/api/bankara-challenge/now").body.results[0]
+      end
+
+      def bankara_open_now
+        @bankara_open_now ||= send_request(:get, "/api/bankara-open/now").body.results[0]
+      end
+
+      def x_match_now
+        @x_now ||= send_request(:get, "/api/x/now").body.results[0]
+      end
+
+      def salmon_run_now
+        @salmon_run_now ||= send_request(:get, "/api/coop-grouping/now").body.results[0]
+      end
+
       def send_request(method, path, params = nil, headers = nil)
         response = splat3_connection.send(method, path, params, headers)
         Ika3::Response.new(response)
