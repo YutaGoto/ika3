@@ -3,6 +3,7 @@ PATH
   specs:
     ika3 (0.2.0)
       activesupport (>= 5.0.0)
+      faraday (>= 2.7.0)
       hashie (>= 2.0.5)
 
 GEM
@@ -17,6 +18,10 @@ GEM
     concurrent-ruby (1.1.10)
     csv (3.2.5)
     diff-lcs (1.5.0)
+    faraday (2.7.2)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     ffi (1.15.5)
     fileutils (1.6.0)
     hashie (5.0.0)
@@ -51,6 +56,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.0)
+    ruby2_keywords (0.0.5)
     securerandom (0.2.0)
     steep (1.3.0)
       activesupport (>= 5.1)
