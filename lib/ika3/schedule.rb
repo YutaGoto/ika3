@@ -10,32 +10,26 @@ end
 module Ika3
   class Schedule
     class << self
-      def regular_now
-        @regular_now_obj ||= send_request(:get, "/api/regular/now").body.results[0]
-      end
+      modes = ["regular", "bankara_challenge", "bankara_open", "x"]
 
-      def bankara_challenge_now
-        @bankara_challenge_now ||= send_request(:get, "/api/bankara-challenge/now").body.results[0]
-      end
+      modes.each do |mode|
+        define_method("#{mode}_now".to_sym) do
+          return instance_variable_get("@#{mode}_now_obj") if instance_variable_defined?("@#{mode}_now_obj")
 
-      def bankara_open_now
-        @bankara_open_now ||= send_request(:get, "/api/bankara-open/now").body.results[0]
-      end
-
-      def x_match_now
-        @x_now ||= send_request(:get, "/api/x/now").body.results[0]
+          instance_variable_set("@#{mode}_now_obj", send_request(:get, "/api/#{mode.dasherize}/now").body.results[0])
+        end
       end
 
       def salmon_run_now
         @salmon_run_now ||= send_request(:get, "/api/coop-grouping/now").body.results[0]
       end
 
+      private
+
       def send_request(method, path, params = nil, headers = nil)
         response = splat3_connection.send(method, path, params, headers)
         Ika3::Response.new(response)
       end
-
-      private
 
       def api_url
         "https://spla3.yuu26.com/"
