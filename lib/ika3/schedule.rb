@@ -11,17 +11,22 @@ module Ika3
   class Schedule
     class << self
       modes = ["regular", "bankara_challenge", "bankara_open", "x"]
+      schedules = ["now", "next"]
 
-      modes.each do |mode|
-        define_method("#{mode}_now".to_sym) do
-          return instance_variable_get("@#{mode}_now_obj") if instance_variable_defined?("@#{mode}_now_obj")
+      schedules.each do |schedule|
+        modes.each do |mode|
+          define_method("#{mode}_#{schedule}".to_sym) do
+            return instance_variable_get("@#{mode}_#{schedule}_obj") if instance_variable_defined?("@#{mode}_#{schedule}_obj")
 
-          instance_variable_set("@#{mode}_now_obj", send_request(:get, "/api/#{mode.dasherize}/now").body.results[0])
+            instance_variable_set("@#{mode}_#{schedule}_obj", send_request(:get, "/api/#{mode.dasherize}/#{schedule}").body.results[0])
+          end
         end
-      end
 
-      def salmon_run_now
-        @salmon_run_now ||= send_request(:get, "/api/coop-grouping/now").body.results[0]
+        define_method("salmon_run_#{schedule}".to_sym) do
+          return instance_variable_get("@salmon_run_#{schedule}_obj") if instance_variable_defined?("@salmon_run_#{schedule}_obj")
+
+          instance_variable_set("@salmon_run_#{schedule}_obj", send_request(:get, "/api/coop-grouping/#{schedule}").body.results[0])
+        end
       end
 
       private
