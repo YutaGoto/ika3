@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["YutaGoto"]
   spec.email = ["you.goto.510@gmail.com"]
 
-  spec.summary = "Splatoon3 weapons infomation library."
-  spec.description = "Splatoon3 weapons infomation library. This gem provide weapon name, sub, and special. not official"
+  spec.summary = "Splatoon3 weapons information library."
+  spec.description = "Splatoon3 weapons information library. This gem provide weapon name, sub, and special. not official"
   spec.homepage = "https://github.com/YutaGoto/ika3"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"

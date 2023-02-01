@@ -2,7 +2,8 @@ version: 2.1
 
 orbs:
   ruby: circleci/ruby@2.0.0
-  slack: circleci/slack@4.10.1
+  python: circleci/python@2.1.1
+  slack: circleci/slack@4.12.1
 
 spec_steps: &spec_steps
   - checkout
@@ -10,6 +11,18 @@ spec_steps: &spec_steps
   - run:
       name: run rspec
       command: bundle e rspec
+
+spell_check_steps: &spell_check_steps
+  - checkout
+  - run:
+      name: upgrade pip
+      command: pip install --upgrade pip
+  - run:
+      name: install codespell
+      command: pip install codespell
+  - run:
+      name: check spelling with codespell
+      command: codespell
 
 slack_steps: &slack_steps
   - checkout
@@ -41,6 +54,11 @@ jobs:
       - image: cimg/ruby:3.2
     executor: ruby/default
     steps: *spec_steps
+  spell-check:
+    docker:
+      - image: cimg/python:3.11
+    executor: python/default
+    steps: *spell_check_steps
   slack:
     docker:
       - image: cimg/ruby:3.1
@@ -50,7 +68,6 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  version: 2
   build: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
@@ -58,11 +75,13 @@ workflows:
       - ruby-30-spec
       - ruby-31-spec
       - ruby-32-spec
+      - spell-check
       - slack:
           requires:
             - ruby-27-spec
             - ruby-30-spec
             - ruby-31-spec
             - ruby-32-spec
+            - spell-check
           context:
             - slack
