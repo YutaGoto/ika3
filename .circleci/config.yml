@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@2.0.0
   python: circleci/python@2.1.1
-  slack: circleci/slack@4.10.1
+  slack: circleci/slack@4.12.1
 
 spec_steps: &spec_steps
   - checkout
@@ -14,12 +14,14 @@ spec_steps: &spec_steps
 
 spell_check_steps: &spell_check_steps
   - checkout
-  - python/install-packages:
-      args: codespell
-      pkg-manager: pip
-      pypi-cache: false
   - run:
-      name: check spell
+      name: upgrade pip
+      command: pip install --upgrade pip
+  - run:
+      name: install codespell
+      command: pip install codespell
+  - run:
+      name: check spelling with codespell
       command: codespell
 
 slack_steps: &slack_steps
