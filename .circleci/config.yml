@@ -19,8 +19,8 @@ spell_check_steps: &spell_check_steps
       pkg-manager: pip
       pypi-cache: false
   - run:
-    name: check spell
-    command: codespell
+      name: check spell
+      command: codespell
 
 slack_steps: &slack_steps
   - checkout
