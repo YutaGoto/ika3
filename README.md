@@ -17,7 +17,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 ## Usage
 
 ```ruby
-reuqire "ika3"
+require "ika3"
 ```
 
 ### Find Weapon data
@@ -43,6 +43,12 @@ splatbombs
  {:name=>"クラッシュブラスター", :sub=>"スプラボム", :special=>"ウルトラショット"},
  {:name=>"パブロ", :sub=>"スプラボム", :special=>"メガホンレーザー5.1ch"}]
 ```
+
+## Note
+
+This gem is NOT related to Nintendo.
+
+The Schedule is used an unofficial API. <https://spla3.yuu26.com/>
 
 ## Contributing
 
