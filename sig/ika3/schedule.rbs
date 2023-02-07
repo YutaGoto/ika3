@@ -1,0 +1,19 @@
+class Hash[unchecked out K, unchecked out V] < Object
+  def method_missing: (name: String) -> untyped
+end
+
+module Ika3
+  class Schedule
+    def initialize: (contact: String) -> void
+
+    private
+
+    def send_request: (method: String, path: String) -> Object
+
+    def api_url: () -> "https://spla3.yuu26.com/"
+
+    def splat3_connection: () -> untyped
+
+    def faraday_options: () -> { url: String, headers: { :"User-Agent" => ::String } }
+  end
+end
