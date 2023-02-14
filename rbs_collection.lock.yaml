@@ -6,14 +6,6 @@ sources:
   repo_dir: gems
 path: ".gem_rbs_collection"
 gems:
-- name: hashie
-  version: '5.0'
-  source:
-    type: git
-    name: ruby/gem_rbs_collection
-    revision: c42c09528dd99252db98f0744181a6de54ec2f55
-    remote: https://github.com/ruby/gem_rbs_collection.git
-    repo_dir: gems
 - name: activesupport
   version: '7.0'
   source:
