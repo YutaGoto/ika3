@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "yaml"
-require "hashie"
 
 require "active_support/core_ext/hash/keys"
 require "active_support/core_ext/string/inflections"

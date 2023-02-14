@@ -1,6 +1,6 @@
 class Hash
   def method_missing(name)
-    return self[name].extend Hash if key? name
+    return self[name] if key? name
 
     each { |k, v| return v if k.to_s.to_sym == name }
     super.method_missing(name)
