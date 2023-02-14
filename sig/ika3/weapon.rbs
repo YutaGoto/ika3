@@ -1,10 +1,6 @@
 module Ika3
-  class Weapon < Hash
-    include Hashie::Extensions::MethodAccess
-
+  class Weapon
     ATTRIBUTES: ::Array[:name | :sub | :special]
-
-    attr_accessor io: untyped
 
     include Ika3::Concerns::Utils
 

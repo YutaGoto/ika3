@@ -1,12 +1,8 @@
 module Ika3
-  class Weapon < Hash
-    include Hashie::Extensions::MethodAccess
-
+  class Weapon
     ATTRIBUTES = [
       :name, :sub, :special
     ].freeze
-
-    attr_accessor :io
 
     ATTRIBUTES.each do |attribute|
       define_method attribute do
@@ -23,7 +19,7 @@ module Ika3
         @cache ||= {}
         unless @cache[weapon_key]
           weapon_config = config[weapon_key] || {}
-          @cache[weapon_key] = Ika3::Weapon[weapon_config].tap {|weapon| weapon.io = $stdout}
+          @cache[weapon_key] = weapon_config
         end
 
         @cache[weapon_key]
