@@ -3,6 +3,11 @@ sploosh_o_matic: &sploosh_o_matic
   sub: カーリングボム
   special: ウルトラハンコ
 
+neo_sploosh_o_matic: &neo_sploosh_o_matic
+  name: ボールドマーカーネオ
+  sub: ジャンプビーコン
+  special: メガホンレーザー5.1ch
+
 splattershot_jr: &splattershot_jr
   name: わかばシューター
   sub: スプラボム
@@ -17,6 +22,11 @@ splash_o_matic: &splash_o_matic
   name: シャープマーカー
   sub: クイックボム
   special: カニタンク
+
+neo_splash_o_matic: &neo_splash_o_matic
+  name: シャープマーカーネオ
+  sub: キューバンボム
+  special: トリプルトルネード
 
 aerosparay_mg: &aerosparay_mg
   name: プロモデラーMG
@@ -48,6 +58,11 @@ n_zap_85: &n_zap_85
   sub: キューバンボム
   special: エナジースタンド
 
+n_zap_89: &n_zap_89
+  name: N-ZAP '89
+  sub: ロボットボム
+  special: デコイチラシ
+
 splattershot_pro: &splattershot_pro
   name: プライムシューター
   sub: ラインマーカー
@@ -63,15 +78,30 @@ forge_splattershot_pro: &forge_splattershot_pro
   sub: スプリンクラー
   special: キューインキ
 
+96_gal_deco: &96_gal_deco
+  name: .96ガロンデコ
+  sub: スプラッシュシールド
+  special: テイオウイカ
+
 jet_squelcher: &jet_squelcher
   name: ジェットスイーパー
   sub: ラインマーカー
   special: キューインキ
 
+custom_jet_squelcher: &custom_jet_squelcher
+  name: ジェットスイーパーカスタム
+  sub: ポイズンミスト
+  special: アメフラシ
+
 l_3_nozzlenose: &l_3_nozzlenose
   name: L3リールガン
   sub: カーリングボム
   special: カニタンク
+
+l_3_nozzlenose_d: &l_3_nozzlenose
+  name: L3リールガンD
+  sub: クイックボム
+  special: ウルトラハンコ
 
 h_3_nozzlenose: &h_3_nozzlenose
   name: H3リールガン
@@ -103,6 +133,11 @@ splatroller: &splatroller
   sub: カーリングボム
   special: グレートバリア
 
+krak_on_splatroller: &krak_on_splatroller
+  name: スプラローラーコラボ
+  sub: ジャンプビーコン
+  special: テイオウイカ
+
 dynamo_roller: &dynamo_roller
   name: ダイナモローラー
   sub: スプリンクラー
@@ -128,10 +163,20 @@ splat_charger: &splat_charger
   sub: スプラボム
   special: キューインキ
 
+z_f_splat_charger: &z_f_splat_charger
+  name: スプラチャージャーコラボ
+  sub: スプラッシュシールド
+  special: トリプルトルネード
+
 splatterscope: &splatterscope
   name: スプラスコープ
   sub: スプラボム
   special: キューインキ
+
+z_f_splatterscope: &z_f_splatterscope
+  name: スプラスコープコラボ
+  sub: スプラッシュシールド
+  special: トリプルトルネード
 
 e_liter_4k: &e_liter_4k
   name: リッター4K
@@ -172,6 +217,11 @@ tri_slocher: &tri_slocher
   name: ヒッセン
   sub: ポイズンミスト
   special: ジェットパック
+
+tri_slosher_nouveau: &tri_slosher_nouveau
+  name: ヒッセン・ヒュー
+  sub: タンサンボム
+  special: エナジースタンド
 
 sloshing_machine: &sloshing_machine
   name: スクリュースロッシャー
@@ -243,10 +293,20 @@ clash_blaster: &clash_blaster
   sub: スプラボム
   special: ウルトラショット
 
+clash_blaster_neo: &clash_blaster_neo
+  name: クラッシュブラスターネオ
+  sub: カーリングボム
+  special: デコイチラシ
+
 rapid_blaster: &rapid_blaster
   name: ラピッドブラスター
   sub: トラップ
   special: トリプルトルネード
+
+rapid_blaster_deco: &rapid_blaster
+  name: ラピッドブラスターデコ
+  sub: トーピード
+  special: ジェットパック
 
 rapid_blaster_pro: &rapid_blaster_pro
   name: Rブラスターエリート
