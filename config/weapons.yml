@@ -14,7 +14,7 @@ splattershot_jr: &splattershot_jr
   special: グレートバリア
 
 custom_splattershot_jr: &custom_splattershot_jr
-  mame: もみじシューター
+  name: もみじシューター
   sub: トーピード
   special: ホップソナー
 
