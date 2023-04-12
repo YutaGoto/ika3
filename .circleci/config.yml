@@ -8,7 +8,6 @@ orbs:
 cop_steps: &cop_steps
   - checkout
   - run: bundle install
-  - run: ruby -v
   - run:
       name: run rubocop
       command: bundle e rubocop
