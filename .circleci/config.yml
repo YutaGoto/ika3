@@ -8,7 +8,9 @@ orbs:
 cop_steps: &cop_steps
   - checkout
   - ruby/install-deps
-  - ruby/rubocop-check
+  - run:
+      name: run rubocop
+      command: bundle e rubocop
 
 spec_steps: &spec_steps
   - checkout
