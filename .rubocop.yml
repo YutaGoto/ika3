@@ -1,0 +1,21 @@
+require:
+  - rubocop-rspec
+  - rubocop-rake
+
+AllCops:
+  NewCops: enable
+
+Layout/LineLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'ika3.gemspec'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+RSpec/MultipleExpectations:
+  Max: 5
+
+Style/Documentation:
+  Enabled: false
