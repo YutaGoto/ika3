@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Ika3
   class Response
     def initialize(faraday_response)
@@ -12,7 +14,7 @@ module Ika3
 
     def headers
       @headers ||= @raw_headers.inject({}) do |result, (key, value)|
-        result.merge(key.split("-").map(&:capitalize).join("-") => value)
+        result.merge(key.split('-').map(&:capitalize).join('-') => value)
       end
     end
 
