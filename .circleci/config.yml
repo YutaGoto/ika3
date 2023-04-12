@@ -7,14 +7,12 @@ orbs:
 
 cop_steps: &cop_steps
   - checkout
-  - run: bundle install
-  - run:
-      name: run rubocop
-      command: bundle e rubocop
+  - ruby/install-deps
+  - ruby/rubocop-check
 
 spec_steps: &spec_steps
   - checkout
-  - run: bundle install
+  - ruby/install-deps
   - run:
       name: run rspec
       command: bundle e rspec
