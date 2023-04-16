@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Ika3
   class Weapon
-    ATTRIBUTES = [
-      :name, :sub, :special
+    ATTRIBUTES = %i[
+      name sub special
     ].freeze
 
     ATTRIBUTES.each do |attribute|
@@ -35,13 +37,13 @@ module Ika3
       def filter_by_sub(sub_name)
         raise "unknown sub weapon: #{sub_name}" unless sub_weapons.values.include?(sub_name)
 
-        config.values.filter{|weapon| weapon[:sub] == sub_name}
+        config.values.filter { |weapon| weapon[:sub] == sub_name }
       end
 
       def reload_config!
         @cache = {}
         @config = nil
-        @config_sub_weapons = nil
+        @sub_weapons = nil
         config
         config_sub_weapons
       end
@@ -73,17 +75,13 @@ module Ika3
       end
 
       def config
-        unless @config
-          @config = load_yaml_file("#{File.dirname(__FILE__)}/../../config/weapons.yml").deep_symbolize_keys
-        end
+        @config ||= load_yaml_file("#{File.dirname(__FILE__)}/../../config/weapons.yml").deep_symbolize_keys
         @config
       end
 
       def config_sub_weapons
-        unless @config_sub_weapons
-          @config_sub_weapons = load_yaml_file("#{File.dirname(__FILE__)}/../../config/sub_weapons.yml").deep_symbolize_keys
-        end
-        @config_sub_weapons
+        @sub_weapons ||= load_yaml_file("#{File.dirname(__FILE__)}/../../config/sub_weapons.yml").deep_symbolize_keys
+        @sub_weapons
       end
 
       def valid?(weapon_key)

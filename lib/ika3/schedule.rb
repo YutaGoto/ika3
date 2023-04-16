@@ -1,4 +1,10 @@
+# frozen_string_literal: true
+
 class Hash
+  def respond_to_missing?(sym)
+    key? name ? true : super
+  end
+
   def method_missing(name)
     return self[name] if key? name
 
@@ -13,22 +19,28 @@ module Ika3
       @contact = contact
     end
 
-    modes = ["regular", "bankara_challenge", "bankara_open", "x"]
-    schedules = ["now", "next"]
+    modes = %w[regular bankara_challenge bankara_open x]
+    schedules = %w[now next]
 
     schedules.each do |schedule|
       modes.each do |mode|
         define_method("#{mode}_#{schedule}".to_sym) do
-          return instance_variable_get("@#{mode}_#{schedule}_obj") if instance_variable_defined?("@#{mode}_#{schedule}_obj")
+          if instance_variable_defined?("@#{mode}_#{schedule}_obj")
+            return instance_variable_get("@#{mode}_#{schedule}_obj")
+          end
 
-          instance_variable_set("@#{mode}_#{schedule}_obj", send_request(:get, "/api/#{mode.dasherize}/#{schedule}").body.results[0])
+          instance_variable_set("@#{mode}_#{schedule}_obj",
+                                send_request(:get, "/api/#{mode.dasherize}/#{schedule}").body.results[0])
         end
       end
 
       define_method("salmon_run_#{schedule}".to_sym) do
-        return instance_variable_get("@salmon_run_#{schedule}_obj") if instance_variable_defined?("@salmon_run_#{schedule}_obj")
+        if instance_variable_defined?("@salmon_run_#{schedule}_obj")
+          return instance_variable_get("@salmon_run_#{schedule}_obj")
+        end
 
-        instance_variable_set("@salmon_run_#{schedule}_obj", send_request(:get, "/api/coop-grouping/#{schedule}").body.results[0])
+        instance_variable_set("@salmon_run_#{schedule}_obj",
+                              send_request(:get, "/api/coop-grouping/#{schedule}").body.results[0])
       end
     end
 
@@ -40,11 +52,11 @@ module Ika3
     end
 
     def api_url
-      "https://spla3.yuu26.com/"
+      'https://spla3.yuu26.com/'
     end
 
     def splat3_connection
-      @splat3_connection ||= Faraday::new(faraday_options) do |c|
+      @splat3_connection ||= Faraday.new(faraday_options) do |c|
         c.request :json
         c.response :json
         c.adapter Faraday.default_adapter

@@ -5,9 +5,14 @@ orbs:
   python: circleci/python@2.1.1
   slack: circleci/slack@4.12.1
 
+cop_steps: &cop_steps
+  - checkout
+  - ruby/install-deps
+  - ruby/rubocop-check
+
 spec_steps: &spec_steps
   - checkout
-  - run: bundle install
+  - ruby/install-deps
   - run:
       name: run rspec
       command: bundle e rspec
@@ -54,6 +59,11 @@ jobs:
       - image: cimg/ruby:3.2
     executor: ruby/default
     steps: *spec_steps
+  cop:
+    docker:
+      - image: cimg/ruby:3.2
+    executor: ruby/default
+    steps: *cop_steps
   spell-check:
     docker:
       - image: cimg/python:3.11
@@ -75,6 +85,7 @@ workflows:
       - ruby-30-spec
       - ruby-31-spec
       - ruby-32-spec
+      - cop
       - spell-check
       - slack:
           requires:
@@ -82,6 +93,7 @@ workflows:
             - ruby-30-spec
             - ruby-31-spec
             - ruby-32-spec
+            - cop
             - spell-check
           context:
             - slack
