@@ -19,7 +19,7 @@ module Ika3
       @contact = contact
     end
 
-    modes = %w[regular bankara_challenge bankara_open x]
+    modes = %w[regular bankara_challenge bankara_open x fest]
     schedules = %w[now next]
 
     schedules.each do |schedule|
@@ -41,6 +41,12 @@ module Ika3
 
         instance_variable_set("@salmon_run_#{schedule}_obj",
                               send_request(:get, "/api/coop-grouping/#{schedule}").body.results[0])
+      end
+
+      def salmon_run_team_contest
+        return @salmon_run_team_contest_obj unless @salmon_run_team_contest_obj.nil?
+
+        @salmon_run_team_contest_obj = send_request(:get, '/api/coop-grouping-team-contest/schedule').body.results[0]
       end
     end
 
