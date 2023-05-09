@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@2.0.0
   python: circleci/python@2.1.1
-  slack: circleci/slack@4.12.1
+  slack: circleci/slack@4.12.3
 
 cop_steps: &cop_steps
   - checkout
@@ -40,46 +40,43 @@ slack_steps: &slack_steps
 
 jobs:
   ruby-27-spec:
-    docker:
-      - image: cimg/ruby:2.7
-    executor: ruby/default
+    executor:
+      name: ruby/default
+      tag: "2.7"
     steps: *spec_steps
   ruby-30-spec:
-    docker:
-      - image: cimg/ruby:3.0
-    executor: ruby/default
+    executor:
+      name: ruby/default
+      tag: "3.0"
     steps: *spec_steps
   ruby-31-spec:
-    docker:
-      - image: cimg/ruby:3.1
-    executor: ruby/default
+    executor:
+      name: ruby/default
+      tag: "3.1"
     steps: *spec_steps
   ruby-32-spec:
-    docker:
-      - image: cimg/ruby:3.2
-    executor: ruby/default
+    executor:
+      name: ruby/default
+      tag: "3.2"
     steps: *spec_steps
   cop:
-    docker:
-      - image: cimg/ruby:3.2
-    executor: ruby/default
+    executor:
+      name: ruby/default
+      tag: "3.2"
     steps: *cop_steps
   spell-check:
-    docker:
-      - image: cimg/python:3.11
-    executor: python/default
+    executor:
+      name: python/default
+      tag: "3.11"
     steps: *spell_check_steps
   slack:
-    docker:
-      - image: cimg/ruby:3.1
-    executor: ruby/default
+    executor:
+      name: ruby/default
+      tag: "3.1"
     steps: *slack_steps
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  build: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+  build:
     jobs:
       - ruby-27-spec
       - ruby-30-spec
