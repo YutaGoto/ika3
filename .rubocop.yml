@@ -18,5 +18,9 @@ Metrics/BlockLength:
 RSpec/MultipleExpectations:
   Max: 5
 
+RSpec/ExampleLength:
+  Max: 15
+  CountAsOne: ["array", "hash", "heredoc"]
+
 Style/Documentation:
   Enabled: false
