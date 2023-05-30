@@ -108,6 +108,11 @@ h_3_nozzlenose: &h_3_nozzlenose
   sub: ポイントセンサー
   special: エナジースタンド
 
+h_3_nozzlenose_d: &h_3_nozzlenose_d
+  name: H3リールガンD
+  sub: スプラッシュシールド
+  special: グレートバリア
+
 squeezer: &squeezer
   name: ボトルガイザー
   sub: スプラッシュシールド
@@ -117,6 +122,11 @@ splattershot_nova: &splattershot_nova
   name: スペースシューター
   sub: ポイントセンサー
   special: メガホンレーザー5.1ch
+
+annaki_splattershot_nova: &annaki_splattershot_nova
+  name: スペースシューターコラボ
+  sub: トラップ
+  special: ジェットパック
 
 carbon_roller: &carbon_roller
   name: カーボンローラー
@@ -152,6 +162,11 @@ big_swig_roller: &big_swig_roller
   name: ワイドローラー
   sub: スプラッシュシールド
   special: キューインキ
+
+big_swig_roller_express: &big_swig_roller_express
+  name: ワイドローラーコラボ
+  sub: ラインマーカー
+  special: アメフラシ
 
 classic_squiffer: &classic_squiffer
   name: スクイックリン
@@ -253,6 +268,11 @@ heavy_splatling: &heavy_splatling
   sub: スプリンクラー
   special: ホップソナー
 
+heavy_splatling_deco: &heavy_splatling
+  name: バレルスピナーデコ
+  sub: ポイントセンサー
+  special: テイオウイカ
+
 hydra_splatling: &hydra_splatling
   name: ハイドラント
   sub: ロボットボム
@@ -313,6 +333,31 @@ rapid_blaster_pro: &rapid_blaster_pro
   sub: ポイズンミスト
   special: キューインキ
 
+rapid_blaster_pro_deco: &rapid_blaster_pro_deco
+  name: Rブラスターエリートデコ
+  sub: ラインマーカー
+  special: メガホンレーザー5.1ch
+
+s_brast_92: &s_brast_92
+  name: S-BRAST92
+  sub: スプリンクラー
+  special: サメライド
+
+splat_brella: &splat_brella
+  name: パラシェルター
+  sub: スプリンクラー
+  special: トリプルトルネード
+
+tenta_brella: &tenta_brella
+  name: キャンピングシェルター
+  sub: ジャンプビーコン
+  special: キューインキ
+
+tenta_sorella_brella: &tenta_sorella_brella
+  name: キャンピングシェルターソレーラ
+  sub: トラップ
+  special: ウルトラショット
+
 inkbrush: &inkbrush
   name: パブロ
   sub: スプラボム
@@ -327,6 +372,11 @@ octobrush: &octobrush
   name: ホクサイ
   sub: キューバンボム
   special: ショクワンダー
+
+painbrush: &painbrush
+  name: フィンセント
+  sub: カーリングボム
+  special: ホップソナー
 
 dapple_dualies: &dapple_dualies
   name: スパッタリー
@@ -348,10 +398,20 @@ dark_tetra_dualies: &dark_tetra_dualies
   sub: ロボットボム
   special: サメライド
 
+light_tetra_dualies: &light_tetra_dualies
+  name: クアッドホッパーホワイト
+  sub: スプリンクラー
+  special: ショクワンダー
+
 dualie_squelchers: &dualie_squelchers
   name: デュアルスイーパー
   sub: スプラボム
   special: ホップソナー
+
+custom_dualie_squelchers: &custom_dualie_squelchers
+  name: デュアルスイーパーカスタム
+  sub: ジャンプビーコン
+  special: デコイチラシ
 
 glooga_dualies: &glooga_dualies
   name: ケルビン525
@@ -377,3 +437,8 @@ splatana_wiper: &splatana_wiper
   name: ドライブワイパー
   sub: トーピード
   special: ウルトラハンコ
+
+splatana_wiper_deco: &splatana_wiper_deco
+  name: ドライブワイパーデコ
+  sub: ジャンプビーコン
+  special: マルチミサイル
