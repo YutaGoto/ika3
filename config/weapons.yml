@@ -358,6 +358,11 @@ tenta_sorella_brella: &tenta_sorella_brella
   sub: トラップ
   special: ウルトラショット
 
+undercover_brella: &undercover_brella
+  name: スパイガジェット
+  sub: トラップ
+  special: サメライド
+
 inkbrush: &inkbrush
   name: パブロ
   sub: スプラボム
