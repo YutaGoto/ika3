@@ -1,8 +1,8 @@
 # Ika3
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/YutaGoto/ika3/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/YutaGoto/ika3/tree/main)
-
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
+[![Gem Version](https://badge.fury.io/rb/ika3.svg)](https://badge.fury.io/rb/ika3)
 
 Weapon data from Splatoon3. This is Unofficial data.
 
