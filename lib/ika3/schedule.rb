@@ -48,6 +48,12 @@ module Ika3
 
         @salmon_run_team_contest_obj = send_request(:get, '/api/coop-grouping-team-contest/schedule').body.results[0]
       end
+
+      def event
+        return @event_match_obj unless @event_match_obj.nil?
+
+        @event_match_obj = send_request(:get, '/api/event/schedule').body.results[0]
+      end
     end
 
     private
