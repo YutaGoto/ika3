@@ -13,4 +13,4 @@ gem 'steep'
 
 gem 'rubocop-rake', '~> 0.6.0'
 
-gem 'rubocop-rspec', '~> 2.22'
+gem 'rubocop-rspec', '~> 2.23'
