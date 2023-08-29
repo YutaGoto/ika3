@@ -153,6 +153,11 @@ dynamo_roller: &dynamo_roller
   sub: スプリンクラー
   special: エナジースタンド
 
+gold_dynamo_roller: &gold_dynamo_roller
+  name: ダイナモローラーテスラ
+  sub: スプラッシュボム
+  special: デコイチラシ
+
 flingza_roller: &flingza_roller
   name: ヴァリアブルローラー
   sub: トラップ
@@ -213,6 +218,11 @@ goo_tuber: &goo_tuber
   sub: トーピード
   special: マルチミサイル
 
+custom_goo_tuber: &custom_goo_tuber
+  name: ソイチューバーカスタム
+  sub: タンサンボム
+  special: ウルトラハンコ
+
 snipewriter_5h: &snipewriter_5h
   name: R-PEN/5H
   sub: スプリンクラー
@@ -243,15 +253,30 @@ sloshing_machine: &sloshing_machine
   sub: タンサンボム
   special: ナイスダマ
 
+sloshing_machine_neo: &sloshing_machine_neo
+  name: スクリュースロッシャーネオ
+  sub: ポイントセンサー
+  special: ウルトラショット
+
 bloblobber: &bloblobber
   name: オーバーフロッシャー
   sub: スプリンクラー
   special: アメフラシ
 
+bloblobber_deco: &bloblobber_deco
+  name: オーバーフロッシャーデコ
+  sub: ラインマーカー
+  special: テイオウイカ
+
 explosher: &explosher
   name: エクスプロッシャー
   sub: ポイントセンサー
   special: アメフラシ
+
+dread_wringer: &dread_wringer
+  name: モップリン
+  sub: キューバンボム
+  special: サメライド
 
 mini_splatling: &mini_splatling
   name: スプラスピナー
@@ -283,10 +308,20 @@ ballpoint_splatling: &ballpoint_splatling
   sub: タンサンボム
   special: ジェットパック
 
+ballpoint_splatling_nouveas: &ballpoint_splatling_nouveas
+  name: クーゲルシュライバー・ヒュー
+  sub: トラップ
+  special: キューインキ
+
 nautilus_47: &nautilus_47
   name: ノーチラス47
   sub: ポイントセンサー
   special: アメフラシ
+
+heavy_edit_splatling: &heavy_edit_splatling
+  name: イグザミナー
+  sub: カーリングボム
+  special: エナジースタンド
 
 luna_blaster: &luna_blaster
   name: ノヴァブラスター
@@ -323,7 +358,7 @@ rapid_blaster: &rapid_blaster
   sub: トラップ
   special: トリプルトルネード
 
-rapid_blaster_deco: &rapid_blaster
+rapid_blaster_deco: &rapid_blaster_deco
   name: ラピッドブラスターデコ
   sub: トーピード
   special: ジェットパック
@@ -347,6 +382,11 @@ splat_brella: &splat_brella
   name: パラシェルター
   sub: スプリンクラー
   special: トリプルトルネード
+
+sorella_brella: &sorella_brella
+  name: パラシェルターソレーラ
+  sub: ロボットボム
+  special: ジェットパック
 
 tenta_brella: &tenta_brella
   name: キャンピングシェルター
@@ -377,6 +417,11 @@ octobrush: &octobrush
   name: ホクサイ
   sub: キューバンボム
   special: ショクワンダー
+
+octobrush_nouveas: &octobrush_nouveas
+  name: ホクサイ・ヒュー
+  sub: ジャンプビーコン
+  special: アメフラシ
 
 painbrush: &painbrush
   name: フィンセント
@@ -427,6 +472,11 @@ tri_stringer: &tri_stringer
   name: トライストリンガー
   sub: ポイズンミスト
   special: メガホンレーザー5.1ch
+
+inkline_tri_stringer: &inkline_tri_stringer
+  name: トライストリンガーコラボ
+  sub: スプリンクラー
+  special: デコイチラシ
 
 reef_lux_450: &reef_lux_450
   name: LACT-450
