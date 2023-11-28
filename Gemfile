@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in ika3.gemspec
 gemspec
 
-gem 'rake', '~> 13.0'
+gem 'rake', '~> 13.1'
 gem 'rbs'
 gem 'rspec', '~> 3.0'
 gem 'rubocop', require: false
