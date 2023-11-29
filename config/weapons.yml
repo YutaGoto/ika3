@@ -118,6 +118,11 @@ squeezer: &squeezer
   sub: スプラッシュシールド
   special: ウルトラショット
 
+foil_squeezer: &foil_squeezer
+  name: ボトルガイザーフォイル
+  sub: ロボットボム
+  special: スミナガシート
+
 splattershot_nova: &splattershot_nova
   name: スペースシューター
   sub: ポイントセンサー
@@ -227,6 +232,11 @@ snipewriter_5h: &snipewriter_5h
   name: R-PEN/5H
   sub: スプリンクラー
   special: エナジースタンド
+
+snipewriter_5b: &snipewriter_5b
+  name: R-PEN/5B
+  sub: スプラッシュシールド
+  special: アメフラシ
 
 slosher: &slosher
   name: バケットスロッシャー
@@ -338,6 +348,11 @@ blaster: &blaster
   sub: ロボットボム
   special: グレートバリア
 
+custom_blaster: &custom_blaster
+  name: ホットブラスターカスタム
+  sub: ポイントセンサー
+  special: ウルトラチャクチ
+
 range_blaster: &range_blaster
   name: ロングブラスター
   sub: キューバンボム
@@ -378,6 +393,11 @@ s_brast_92: &s_brast_92
   sub: スプリンクラー
   special: サメライド
 
+s_brast_91: &s_brast_91
+  name: S-BRAST91
+  sub: クイックボム
+  special: ナイスダマ
+
 splat_brella: &splat_brella
   name: パラシェルター
   sub: スプリンクラー
@@ -402,6 +422,11 @@ undercover_brella: &undercover_brella
   name: スパイガジェット
   sub: トラップ
   special: サメライド
+
+undercover_sorella_brella: &undercover_sorella_brella
+  name: スパイガジェットソレーラ
+  sub: トーピード
+  special: スミナガシート
 
 inkbrush: &inkbrush
   name: パブロ
@@ -428,6 +453,11 @@ painbrush: &painbrush
   sub: カーリングボム
   special: ホップソナー
 
+painbrush_nouveas: &painbrush_nouveas
+  name: フィンセント・ヒュー
+  sub: ポイントセンサー
+  special: マルチミサイル
+
 dapple_dualies: &dapple_dualies
   name: スパッタリー
   sub: ジャンプビーコン
@@ -442,6 +472,11 @@ splat_dualies: &splat_dualies
   name: スプラマニューバー
   sub: キューバンボム
   special: カニタンク
+
+inkline_splat_dualies: &inkline_splat_dualies
+  name: スプラマニューバーコラボ
+  sub: カーリングボム
+  special: ウルトラチャクチ
 
 dark_tetra_dualies: &dark_tetra_dualies
   name: クアッドホッパーブラック
@@ -483,10 +518,20 @@ reef_lux_450: &reef_lux_450
   sub: カーリングボム
   special: マルチミサイル
 
+reef_lux_450_deco: &reef_lux_450_deco
+  name: LACT-450デコ
+  sub: スプラッシュシールド
+  special: サメライド
+
 splatana_stamper: &splatana_stamper
   name: ジムワイパー
   sub: クイックボム
   special: ショクワンダー
+
+splatana_stamper_nouveau: &splatana_stamper_nouveau
+  name: ジムワイパー・ヒュー
+  sub: ポイズンミスト
+  special: カニタンク
 
 splatana_wiper: &splatana_wiper
   name: ドライブワイパー
