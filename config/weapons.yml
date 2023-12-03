@@ -473,7 +473,7 @@ splat_dualies: &splat_dualies
   sub: キューバンボム
   special: カニタンク
 
-inkline_splat_dualies: &inkline_splat_dualies
+enperry_splat_dualies: &enperry_splat_dualies
   name: スプラマニューバーコラボ
   sub: カーリングボム
   special: ウルトラチャクチ
@@ -528,7 +528,7 @@ splatana_stamper: &splatana_stamper
   sub: クイックボム
   special: ショクワンダー
 
-splatana_stamper_nouveau: &splatana_stamper_nouveau
+neo_splatana_stamper: &neo_splatana_stamper
   name: ジムワイパー・ヒュー
   sub: ポイズンミスト
   special: カニタンク
