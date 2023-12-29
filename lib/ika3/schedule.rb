@@ -24,7 +24,7 @@ module Ika3
 
     schedules.each do |schedule|
       modes.each do |mode|
-        define_method("#{mode}_#{schedule}".to_sym) do
+        define_method(:"#{mode}_#{schedule}") do
           if instance_variable_defined?("@#{mode}_#{schedule}_obj")
             return instance_variable_get("@#{mode}_#{schedule}_obj")
           end
@@ -34,7 +34,7 @@ module Ika3
         end
       end
 
-      define_method("salmon_run_#{schedule}".to_sym) do
+      define_method(:"salmon_run_#{schedule}") do
         if instance_variable_defined?("@salmon_run_#{schedule}_obj")
           return instance_variable_get("@salmon_run_#{schedule}_obj")
         end
