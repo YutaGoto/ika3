@@ -1,9 +1,9 @@
 version: 2.1
 
 orbs:
-  ruby: circleci/ruby@2.0.0
+  ruby: circleci/ruby@2.1.0
   python: circleci/python@2.1.1
-  slack: circleci/slack@4.12.3
+  slack: circleci/slack@4.12.5
 
 cop_steps: &cop_steps
   - checkout
@@ -39,11 +39,6 @@ slack_steps: &slack_steps
       template: basic_success_1
 
 jobs:
-  ruby-27-spec:
-    executor:
-      name: ruby/default
-      tag: "2.7"
-    steps: *spec_steps
   ruby-30-spec:
     executor:
       name: ruby/default
@@ -59,37 +54,42 @@ jobs:
       name: ruby/default
       tag: "3.2"
     steps: *spec_steps
+  ruby-33-spec:
+    executor:
+      name: ruby/default
+      tag: "3.3"
+    steps: *spec_steps
   cop:
     executor:
       name: ruby/default
-      tag: "3.2"
+      tag: "3.3"
     steps: *cop_steps
   spell-check:
     executor:
       name: python/default
-      tag: "3.11"
+      tag: "3.12"
     steps: *spell_check_steps
   slack:
     executor:
       name: ruby/default
-      tag: "3.1"
+      tag: "3.2"
     steps: *slack_steps
 
 workflows:
   build:
     jobs:
-      - ruby-27-spec
       - ruby-30-spec
       - ruby-31-spec
       - ruby-32-spec
+      - ruby-33-spec
       - cop
       - spell-check
       - slack:
           requires:
-            - ruby-27-spec
             - ruby-30-spec
             - ruby-31-spec
             - ruby-32-spec
+            - ruby-33-spec
             - cop
             - spell-check
           context:

@@ -6,7 +6,7 @@ module Ika3
       module_function
 
       def load_yaml_file(file)
-        YAML.safe_load(File.read(file), aliases: true)
+        YAML.safe_load_file(file, aliases: true)
       end
     end
   end

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ika3 (0.8.0)
+    ika3 (0.8.1)
       activesupport (>= 5.0.0)
       faraday (>= 2.7.0)
 
