@@ -28,11 +28,10 @@ GEM
     diff-lcs (1.5.0)
     drb (2.2.0)
       ruby2_keywords
-    faraday (2.8.1)
-      base64
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (3.0.2)
+    faraday (2.9.0)
+      faraday-net_http (>= 2.0, < 3.2)
+    faraday-net_http (3.1.0)
+      net-http
     ffi (1.16.3)
     fileutils (1.7.2)
     i18n (1.14.1)
@@ -45,6 +44,8 @@ GEM
     logger (1.6.0)
     minitest (5.20.0)
     mutex_m (0.2.0)
+    net-http (0.4.1)
+      uri
     parallel (1.24.0)
     parser (3.3.0.1)
       ast (~> 2.4.1)
@@ -119,6 +120,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
+    uri (0.13.0)
 
 PLATFORMS
   x86_64-linux
