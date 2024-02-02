@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+module Ika3
+  class Response
+    def initialize: (untyped) -> void
+
+    def body: () -> untyped
+
+    def headers: () -> untyped
+
+    def status: () -> untyped
+  end
+end
