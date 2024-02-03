@@ -2,7 +2,15 @@
 
 module Ika3
   class Response
-    def initialize: (untyped) -> void
+    @raw_body: untyped
+
+    @raw_headers: untyped
+
+    @raw_status: untyped
+
+    @headers: untyped
+
+    def initialize: (untyped faraday_response) -> void
 
     def body: () -> untyped
 

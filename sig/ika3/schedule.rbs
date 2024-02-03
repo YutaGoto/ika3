@@ -1,9 +1,15 @@
-class Hash[unchecked out K, unchecked out V] < Object
-  def method_missing: (Symbol) -> untyped
+class ::Hash[unchecked out K, unchecked out V]
+  def respond_to_missing?: (untyped name) -> untyped
+
+  def method_missing: (::Symbol) -> untyped
 end
 
 module Ika3
   class Schedule
+    @contact: String
+
+    @splat3_connection: untyped
+
     def initialize: (String) -> void
 
     private

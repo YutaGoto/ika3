@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
 class Hash
-  def respond_to_missing?(sym)
-    key? name ? true : super
+  def respond_to_missing?(name)
+    key?(name) ? true : super
   end
 
   def method_missing(name)
-    return self[name] if key? name
+    each do |key, value|
+      return value if key&.to_sym == name
+    end
 
-    each { |k, v| return v if k.to_s.to_sym == name }
     super.method_missing(name)
   end
 end
