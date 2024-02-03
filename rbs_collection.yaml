@@ -11,8 +11,6 @@ path: .gem_rbs_collection
 gems:
   # Skip loading rbs gem's RBS.
   # It's unnecessary if you don't use rbs as a library.
-  - name: faraday
-    ignore: true
   - name: rbs
     ignore: true
   - name: steep
