@@ -6,7 +6,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: c42c09528dd99252db98f0744181a6de54ec2f55
+    revision: 846c09971455f0e144cef2f5a6c9fe6d8905d3e1
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: ast
@@ -30,7 +30,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: c42c09528dd99252db98f0744181a6de54ec2f55
+    revision: 846c09971455f0e144cef2f5a6c9fe6d8905d3e1
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: connection_pool
@@ -45,19 +45,11 @@ gems:
   version: '0'
   source:
     type: stdlib
-- name: faraday
-  version: '2.5'
-  source:
-    type: git
-    name: ruby/gem_rbs_collection
-    revision: c42c09528dd99252db98f0744181a6de54ec2f55
-    remote: https://github.com/ruby/gem_rbs_collection.git
-    repo_dir: gems
-- name: fileutils
+- name: erb
   version: '0'
   source:
     type: stdlib
-- name: forwardable
+- name: fileutils
   version: '0'
   source:
     type: stdlib
@@ -66,7 +58,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: c42c09528dd99252db98f0744181a6de54ec2f55
+    revision: 846c09971455f0e144cef2f5a6c9fe6d8905d3e1
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: json
@@ -86,14 +78,6 @@ gems:
   source:
     type: stdlib
 - name: mutex_m
-  version: '0'
-  source:
-    type: stdlib
-- name: net-http
-  version: '0'
-  source:
-    type: stdlib
-- name: net-protocol
   version: '0'
   source:
     type: stdlib
@@ -153,6 +137,10 @@ gems:
     revision: 846c09971455f0e144cef2f5a6c9fe6d8905d3e1
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
+- name: securerandom
+  version: '0'
+  source:
+    type: stdlib
 - name: singleton
   version: '0'
   source:
@@ -162,10 +150,6 @@ gems:
   source:
     type: stdlib
 - name: timeout
-  version: '0'
-  source:
-    type: stdlib
-- name: uri
   version: '0'
   source:
     type: stdlib
