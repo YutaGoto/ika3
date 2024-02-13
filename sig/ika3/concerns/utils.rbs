@@ -1,7 +1,7 @@
 module Ika3
   module Concerns
     module Utils
-      def self?.load_yaml_file: (untyped file) -> untyped
+      def self?.load_yaml_file: (String) -> untyped
     end
   end
 end
