@@ -2,16 +2,6 @@
 
 module Ika3
   class Weapon
-    ATTRIBUTES = %i[
-      name sub special
-    ].freeze
-
-    ATTRIBUTES.each do |attribute|
-      define_method attribute do
-        self[attribute]
-      end
-    end
-
     class << self
       include Ika3::Concerns::Utils
 

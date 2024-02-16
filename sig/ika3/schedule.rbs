@@ -1,14 +1,20 @@
-class Hash[unchecked out K, unchecked out V] < Object
-  def method_missing: (name: String) -> untyped
+class ::Hash[unchecked out K, unchecked out V]
+  def respond_to_missing?: (untyped name) -> untyped
+
+  def method_missing: (::Symbol) -> untyped
 end
 
 module Ika3
   class Schedule
-    def initialize: (contact: String) -> void
+    @contact: String
+
+    @splat3_connection: untyped
+
+    def initialize: (String) -> void
 
     private
 
-    def send_request: (method: String, path: String) -> Object
+    def send_request: (Symbol, String) -> untyped
 
     def api_url: () -> "https://spla3.yuu26.com/"
 

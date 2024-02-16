@@ -1,0 +1,21 @@
+# frozen_string_literal: true
+
+module Ika3
+  class Response
+    @raw_body: untyped
+
+    @raw_headers: untyped
+
+    @raw_status: untyped
+
+    @headers: untyped
+
+    def initialize: (untyped faraday_response) -> void
+
+    def body: () -> untyped
+
+    def headers: () -> untyped
+
+    def status: () -> untyped
+  end
+end
