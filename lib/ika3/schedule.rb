@@ -50,16 +50,39 @@ module Ika3
       def initialize(data)
         @start_time = data['start_time']
         @end_time = data['end_time']
-        @rule = data['rule']
-        @stages = data['stages']
+        @rule = Rule.new(data['rule'])
+        @stages = data['stages'].map { |stage| Stage.new(stage) }
         @is_fest = data['is_fest']
       end
+
+      class Stage
+        attr_accessor :id, :name, :image
+
+        def initialize(data)
+          @id = data['id']
+          @name = data['name']
+          @image = data['image']
+        end
+      end
+
+      class Rule
+        attr_accessor :name, :key
+
+        def initialize(data)
+          @name = data['name']
+          @key = data['key']
+        end
+      end
+
+      private_constant :Stage, :Rule
     end
 
     class Salmon
       attr_accessor :start_time, :end_time, :stage, :weapons
 
       def initialize(data)
+        return unless data
+
         @start_time = data['start_time']
         @end_time = data['end_time']
         @stage = Stage.new(data['stage'])
