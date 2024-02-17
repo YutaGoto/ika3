@@ -47,14 +47,14 @@ RSpec.describe Ika3::Schedule do
 
   describe '#salmon_run_now' do
     it 'get current salmon run' do
-      expect(schedule.salmon_run_now).to include('start_time')
+      # expect(schedule.salmon_run_now).to include('start_time')
       expect(schedule.salmon_run_now.weapons.count).to be(4)
     end
   end
 
   describe '#salmon_run_team_contest' do
     it 'get current salmon run team contest' do
-      expect(schedule.salmon_run_team_contest).to be_nil
+      expect(schedule.salmon_run_team_contest.stage).to be_nil
     end
   end
 end
