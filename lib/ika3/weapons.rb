@@ -3,8 +3,6 @@
 module Ika3
   class Weapon
     class << self
-      include Ika3::Concerns::Utils
-
       class W
         attr_reader :name, :sub, :special
 
@@ -89,6 +87,10 @@ module Ika3
 
       def valid?(weapon_key)
         names.include?(weapon_key)
+      end
+
+      def load_yaml_file(file)
+        YAML.safe_load_file(file, aliases: true)
       end
     end
   end

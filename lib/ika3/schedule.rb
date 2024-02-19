@@ -45,7 +45,7 @@ module Ika3
     end
 
     class Battle
-      attr_accessor :start_time, :end_time, :rule, :stages, :is_fest
+      attr_reader :start_time, :end_time, :rule, :stages, :is_fest
 
       def initialize(data)
         @start_time = data['start_time']
@@ -56,7 +56,7 @@ module Ika3
       end
 
       class Stage
-        attr_accessor :id, :name, :image
+        attr_reader :id, :name, :image
 
         def initialize(data)
           @id = data['id']
@@ -66,7 +66,7 @@ module Ika3
       end
 
       class Rule
-        attr_accessor :name, :key
+        attr_reader :name, :key
 
         def initialize(data)
           @name = data['name']
@@ -78,7 +78,7 @@ module Ika3
     end
 
     class Salmon
-      attr_accessor :start_time, :end_time, :stage, :weapons
+      attr_reader :start_time, :end_time, :stage, :weapons
 
       def initialize(data)
         return unless data
@@ -90,7 +90,7 @@ module Ika3
       end
 
       class Stage
-        attr_accessor :name, :image
+        attr_reader :name, :image
 
         def initialize(data)
           @name = data['name']
@@ -99,7 +99,7 @@ module Ika3
       end
 
       class Weapon
-        attr_accessor :name, :image
+        attr_reader :name, :image
 
         def initialize(data)
           @name = data['name']
