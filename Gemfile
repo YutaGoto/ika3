@@ -10,7 +10,7 @@ gem 'rbs'
 gem 'rspec', '~> 3.13'
 gem 'rubocop', require: false
 gem 'steep'
+gem 'typeprof'
 
 gem 'rubocop-rake', '~> 0.6.0'
-
 gem 'rubocop-rspec', '~> 2.26'
