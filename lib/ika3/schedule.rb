@@ -48,20 +48,20 @@ module Ika3
       attr_reader :start_time, :end_time, :rule, :stages, :is_fest
 
       def initialize(data)
-        @start_time = data['start_time']
-        @end_time = data['end_time']
-        @rule = Rule.new(data['rule'])
-        @stages = data['stages'].map { |stage| Stage.new(stage) }
-        @is_fest = data['is_fest']
+        @start_time = data&.[](:start_time)
+        @end_time = data&.[](:end_time)
+        @rule = Rule.new(data&.[](:rule))
+        @stages = data&.[](:stages)&.map { |stage| Stage.new(stage) }
+        @is_fest = data&.[](:is_fest)
       end
 
       class Stage
         attr_reader :id, :name, :image
 
         def initialize(data)
-          @id = data['id']
-          @name = data['name']
-          @image = data['image']
+          @id = data&.[](:id)
+          @name = data&.[](:name)
+          @image = data&.[](:image)
         end
       end
 
@@ -69,8 +69,8 @@ module Ika3
         attr_reader :name, :key
 
         def initialize(data)
-          @name = data['name']
-          @key = data['key']
+          @name = data&.[](:name)
+          @key = data&.[](:key)
         end
       end
 
