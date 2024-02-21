@@ -1,25 +1,61 @@
-class ::Hash[unchecked out K, unchecked out V]
-  def respond_to_missing?: (untyped name) -> untyped
-
-  def method_missing: (::Symbol) -> untyped
-end
-
 module Ika3
   class Schedule
     @contact: String
-
-    @splat3_connection: untyped
+    @salmon_run_team_contest: Salmon
+    @splat3_connection: Faraday::Connection
+    @event_match: Battle
 
     def initialize: (String) -> void
+    def salmon_run_team_contest: -> Salmon
+    def event: -> Battle
 
     private
 
-    def send_request: (Symbol, String) -> untyped
-
+    def send_request: (Symbol, String) -> Ika3::Response
     def api_url: () -> "https://spla3.yuu26.com/"
-
-    def splat3_connection: () -> untyped
-
+    def splat3_connection: () -> Faraday::Connection
     def faraday_options: () -> { url: String, headers: { :"User-Agent" => ::String } }
+
+    class Battle
+      @start_time: untyped
+      @end_time: untyped
+      @rule: Rule
+      @stages: Array[Stage]
+      @is_fest: untyped
+      def initialize: (Hash[untyped, untyped] data) -> void
+
+      class Stage
+        @id: untyped
+        @name: String
+        @image: untyped
+        def initialize: (Hash[untyped, untyped] data) -> void
+      end
+
+      class Rule
+        @name: untyped
+        @key: untyped
+        def initialize: (Hash[untyped, untyped] data) -> void
+      end
+    end
+
+    class Salmon
+      @start_time: untyped
+      @end_time: untyped
+      @stage: Stage
+      @weapons: Array[Weapon]
+      def initialize: (Hash[untyped, untyped] data) -> void
+
+      class Stage
+        @name: String
+        @image: untyped
+        def initialize: (Hash[untyped, untyped] data) -> void
+      end
+
+      class Weapon
+        @name: String
+        @image: String
+        def initialize: (Hash[untyped, untyped] data) -> void
+      end
+    end
   end
 end

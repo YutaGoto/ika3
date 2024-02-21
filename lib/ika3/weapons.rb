@@ -3,7 +3,17 @@
 module Ika3
   class Weapon
     class << self
-      include Ika3::Concerns::Utils
+      class W
+        attr_reader :name, :sub, :special
+
+        def initialize(data)
+          @name = data[:name]
+          @sub = data[:sub]
+          @special = data[:special]
+        end
+      end
+
+      private_constant :W
 
       def find(weapon_key)
         raise "unknown weapon: #{weapon_key}" unless valid?(weapon_key)
@@ -14,7 +24,7 @@ module Ika3
           @cache[weapon_key] = weapon_config
         end
 
-        @cache[weapon_key]
+        W.new(@cache[weapon_key])
       end
 
       def find_by_name(weapon_name)
@@ -27,7 +37,8 @@ module Ika3
       def filter_by_sub(sub_name)
         raise "unknown sub weapon: #{sub_name}" unless sub_weapons.values.include?(sub_name)
 
-        config.values.filter { |weapon| weapon[:sub] == sub_name }
+        weapons = config.values.filter { |weapon| weapon[:sub] == sub_name }
+        weapons.map { |weapon| W.new(weapon) }
       end
 
       def reload_config!
@@ -76,6 +87,10 @@ module Ika3
 
       def valid?(weapon_key)
         names.include?(weapon_key)
+      end
+
+      def load_yaml_file(file)
+        YAML.safe_load_file(file, aliases: true)
       end
     end
   end
