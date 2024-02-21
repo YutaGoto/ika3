@@ -6,28 +6,28 @@ RSpec.describe Ika3::Schedule do
 
   describe '#regular_now' do
     it 'get current regular match' do
-      expect(schedule.regular_now).to include('start_time')
+      expect(schedule.regular_now.start_time).not_to be_nil
       expect(schedule.regular_now.stages.count).to be(2)
     end
   end
 
   describe '#bankara_open_next' do
     it 'get next bankara open match' do
-      expect(schedule.bankara_open_next).to include('start_time')
+      expect(schedule.bankara_open_next.start_time).not_to be_nil
       expect(schedule.bankara_open_next.stages.count).to be(2)
     end
   end
 
   describe '#bankara_challenge_next' do
     it 'get next bankara challenge match' do
-      expect(schedule.bankara_challenge_next).to include('start_time')
+      expect(schedule.bankara_challenge_next.start_time).not_to be_nil
       expect(schedule.bankara_challenge_next.stages.count).to be(2)
     end
   end
 
   describe '#x_now' do
     it 'get current x match' do
-      expect(schedule.x_now).to include('start_time')
+      expect(schedule.x_now.start_time).not_to be_nil
       expect(schedule.x_now.stages.count).to be(2)
     end
   end
@@ -36,7 +36,7 @@ RSpec.describe Ika3::Schedule do
     let(:fest) { schedule.fest_now.is_fest }
 
     it 'get current fest match' do
-      expect(schedule.fest_now).to include('start_time')
+      expect(schedule.fest_now.start_time).not_to be_nil
       if fest
         expect(schedule.fest_now.stages.count).to be(stages_count)
       else
@@ -47,7 +47,7 @@ RSpec.describe Ika3::Schedule do
 
   describe '#salmon_run_now' do
     it 'get current salmon run' do
-      # expect(schedule.salmon_run_now).to include('start_time')
+      expect(schedule.salmon_run_now.start_time).not_to be_nil
       expect(schedule.salmon_run_now.weapons.count).to be(4)
     end
   end
