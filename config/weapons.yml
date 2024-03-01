@@ -53,6 +53,11 @@ tentatek_splattershot: &tentatek_splattershot
   sub: スプラッシュシールド
   special: メガホンレーザー5.1ch
 
+52_gal_deco: &52_gal_deco
+  name: .52ガロンデコ
+  sub: カーリングボム
+  special: メガホンレーザー5.1ch
+
 n_zap_85: &n_zap_85
   name: N-ZAP '85
   sub: キューバンボム
@@ -168,6 +173,11 @@ flingza_roller: &flingza_roller
   sub: トラップ
   special: マルチミサイル
 
+foil_flingza_roller: &foil_flingza_roller
+  name: ヴァリアブルローラーフォイル
+  sub: キューバンボム
+  special: スミナガシート
+
 big_swig_roller: &big_swig_roller
   name: ワイドローラー
   sub: スプラッシュシールド
@@ -182,6 +192,11 @@ classic_squiffer: &classic_squiffer
   name: スクイックリン
   sub: ポイントセンサー
   special: グレートバリア
+
+new_squiffer: &new_squiffer
+  name: スクイックリンβ
+  sub: ロボットボム
+  special: ショクワンダー
 
 splat_charger: &splat_charger
   name: スプラチャージャー
@@ -208,10 +223,21 @@ e_liter_4k: &e_liter_4k
   sub: トラップ
   special: ホップソナー
 
+custom_e_liter_4k: &custom_e_liter_4k
+  name: リッター4Kカスタム
+  sub: ジャンプビーコン
+  special: テイオウイカ
+
 e_liter_4K_scope: &e_liter_4K_scope
   name: 4Kスコープ
   sub: トラップ
   special: ホップソナー
+
+custom_e_liter_4k_scope: &custom_e_liter_4k_scope
+  name: 4Kスコープカスタム
+  sub: ジャンプビーコン
+  special: テイオウイカ
+
 
 bamboozler_14_mk_1: &bamboozler_14_mk_1
   name: 14式竹筒銃・甲
@@ -283,10 +309,20 @@ explosher: &explosher
   sub: ポイントセンサー
   special: アメフラシ
 
+custom_explosher: &custom_explosher
+  name: エクスプロッシャーカスタム
+  sub: スプラッシュシールド
+  special: ウルトラチャクチ
+
 dread_wringer: &dread_wringer
   name: モップリン
   sub: キューバンボム
   special: サメライド
+
+dread_wringer_d: &dread_wringer_d
+  name: モップリンD
+  sub: ジャンプビーコン
+  special: ホップソナー
 
 mini_splatling: &mini_splatling
   name: スプラスピナー
@@ -327,6 +363,11 @@ nautilus_47: &nautilus_47
   name: ノーチラス47
   sub: ポイントセンサー
   special: アメフラシ
+
+nautilus_79: &nautilus_79
+  name: ノーチラス79
+  sub: キューバンボム
+  special: ウルトラチャクチ
 
 heavy_edit_splatling: &heavy_edit_splatling
   name: イグザミナー
@@ -418,6 +459,11 @@ tenta_sorella_brella: &tenta_sorella_brella
   sub: トラップ
   special: ウルトラショット
 
+recycled_brella_24_mk_1: &recycled_brella_24_mk_1
+  name: 24式張替傘・甲
+  sub: ラインマーカー
+  special: グレートバリア
+
 undercover_brella: &undercover_brella
   name: スパイガジェット
   sub: トラップ
@@ -502,6 +548,16 @@ glooga_dualies: &glooga_dualies
   name: ケルビン525
   sub: スプラッシュシールド
   special: ナイスダマ
+
+glooga_dualies_deco: &glooga_dualies_deco
+  name: ケルビン525デコ
+  sub: ポイントセンサー
+  special: ウルトラショット
+
+douser_dualies_ff: &douser_dualies_ff
+  name: ガエンFF
+  sub: トラップ
+  special: メガホンレーザー5.1ch
 
 tri_stringer: &tri_stringer
   name: トライストリンガー
