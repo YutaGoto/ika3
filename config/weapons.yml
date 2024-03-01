@@ -193,7 +193,7 @@ classic_squiffer: &classic_squiffer
   sub: ポイントセンサー
   special: グレートバリア
 
-nwq_squiffer: &new_squiffer
+new_squiffer: &new_squiffer
   name: スクイックリンβ
   sub: ロボットボム
   special: ショクワンダー
@@ -555,7 +555,7 @@ glooga_dualies_deco: &glooga_dualies_deco
   special: ウルトラショット
 
 douser_dualies_ff: &douser_dualies_ff
-  name: ガロンFF
+  name: ガエンFF
   sub: トラップ
   special: メガホンレーザー5.1ch
 
