@@ -78,7 +78,7 @@ module Ika3
     end
 
     class Salmon
-      attr_reader :start_time, :end_time, :stage, :weapons
+      attr_reader :start_time, :end_time, :stage, :weapons, :boss
 
       def initialize(data)
         return unless data
@@ -87,6 +87,7 @@ module Ika3
         @end_time = data['end_time']
         @stage = Stage.new(data['stage'])
         @weapons = data['weapons'].map { |weapon| Weapon.new(weapon) }
+        @boss = Boss.new(data['boss'])
       end
 
       class Stage
@@ -107,7 +108,16 @@ module Ika3
         end
       end
 
-      private_constant :Stage, :Weapon
+      class Boss
+        attr_reader :name, :id
+
+        def initialize(data)
+          @name = data['name']
+          @id = data['id']
+        end
+      end
+
+      private_constant :Stage, :Weapon, :Boss
     end
 
     private_constant :Battle, :Salmon

@@ -43,6 +43,7 @@ module Ika3
       @end_time: untyped
       @stage: Stage
       @weapons: Array[Weapon]
+      @boss: untyped
       def initialize: (Hash[untyped, untyped] data) -> void
 
       class Stage
@@ -52,6 +53,12 @@ module Ika3
       end
 
       class Weapon
+        @name: String
+        @image: String
+        def initialize: (Hash[untyped, untyped] data) -> void
+      end
+
+      class Boss
         @name: String
         @image: String
         def initialize: (Hash[untyped, untyped] data) -> void
