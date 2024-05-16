@@ -93,4 +93,4 @@ workflows:
             - cop
             - spell-check
           context:
-            - slack
+            - slack-secrets
