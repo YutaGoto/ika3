@@ -244,6 +244,11 @@ bamboozler_14_mk_1: &bamboozler_14_mk_1
   sub: ロボットボム
   special: メガホンレーザー5.1ch
 
+bamboozler_14_mk_2: &bamboozler_14_mk_2
+  name: 14式竹筒銃・乙
+  sub: タンサンボム
+  special: デコイチラシ
+
 goo_tuber: &goo_tuber
   name: ソイチューバー
   sub: トーピード
@@ -349,6 +354,11 @@ hydra_splatling: &hydra_splatling
   sub: ロボットボム
   special: ナイスダマ
 
+custom_hydra_splatling: &custom_hydra_splatling
+  name: ハイドラントカスタム
+  sub: トラップ
+  special: スミナガシート
+
 ballpoint_splatling: &ballpoint_splatling
   name: クーゲルシュライバー
   sub: タンサンボム
@@ -374,6 +384,11 @@ heavy_edit_splatling: &heavy_edit_splatling
   sub: カーリングボム
   special: エナジースタンド
 
+heavy_edit_splatling_nouveau: &heavy_edit_splatling_nouveau
+  name: イグザミナー・ヒュー
+  sub: スプラッシュボム
+  special: カニタンク
+
 luna_blaster: &luna_blaster
   name: ノヴァブラスター
   sub: スプラボム
@@ -398,6 +413,11 @@ range_blaster: &range_blaster
   name: ロングブラスター
   sub: キューバンボム
   special: ホップソナー
+
+custom_range_blaster: &custom_range_blaster
+  name: ロングブラスターカスタム
+  sub: スプラッシュボム
+  special: テイオウイカ
 
 clash_blaster: &clash_blaster
   name: クラッシュブラスター
@@ -463,6 +483,11 @@ recycled_brella_24_mk_1: &recycled_brella_24_mk_1
   name: 24式張替傘・甲
   sub: ラインマーカー
   special: グレートバリア
+
+recycled_brella_24_mk_2: &recycled_brella_24_mk_2
+  name: 24式張替傘・乙
+  sub: ポイズンミスト
+  special: ウルトラチャクチ
 
 undercover_brella: &undercover_brella
   name: スパイガジェット
@@ -559,6 +584,11 @@ douser_dualies_ff: &douser_dualies_ff
   sub: トラップ
   special: メガホンレーザー5.1ch
 
+custom_douser_dualies_ff: &custom_douser_dualies_ff
+  name: ガエンFFカスタム
+  sub: クイックボム
+  special: トリプルトルネード
+
 tri_stringer: &tri_stringer
   name: トライストリンガー
   sub: ポイズンミスト
@@ -579,6 +609,16 @@ reef_lux_450_deco: &reef_lux_450_deco
   sub: スプラッシュシールド
   special: サメライド
 
+wellstring_v: &wellstring_v
+  name: フロイドV
+  sub: ロボットボム
+  special: ウルトラハンコ
+
+custom_wellstring_v: &custom_wellstring_v
+  name: フロイドVカスタム
+  sub: ポイントセンサー
+  special: ホップソナー
+
 splatana_stamper: &splatana_stamper
   name: ジムワイパー
   sub: クイックボム
@@ -598,3 +638,13 @@ splatana_wiper_deco: &splatana_wiper_deco
   name: ドライブワイパーデコ
   sub: ジャンプビーコン
   special: マルチミサイル
+
+mint_decavitator: &mint_decavitator
+  name: デンタルワイパーミント
+  sub: キューバンボム
+  special: グレートバリア
+
+charcoal_decavitator: &charcoal_decavitator
+  name: デンタルワイパースミ
+  sub: スプラッシュシールド
+  special: ジェットパック
