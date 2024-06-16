@@ -1,6 +1,7 @@
 require:
   - rubocop-rspec
   - rubocop-rake
+  - rubocop-rbs
 
 AllCops:
   NewCops: enable
@@ -21,6 +22,10 @@ RSpec/MultipleExpectations:
 RSpec/ExampleLength:
   Max: 15
   CountAsOne: ["array", "hash", "heredoc"]
+
+Rbs/MethodSignature:
+  Exclude:
+    - 'lib/ika3/schedule.rb'
 
 Style/Documentation:
   Enabled: false
