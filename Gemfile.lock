@@ -57,7 +57,7 @@ GEM
     rbs (3.5.1)
       logger
     regexp_parser (2.9.2)
-    rexml (3.3.0)
+    rexml (3.3.1)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -90,7 +90,7 @@ GEM
     rubocop-rbs (0.1.1)
       rbs
       rubocop
-    rubocop-rspec (3.0.1)
+    rubocop-rspec (3.0.2)
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     securerandom (0.3.1)
