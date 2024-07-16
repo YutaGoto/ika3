@@ -59,8 +59,8 @@ module Ika3
       end
 
       class Boss
+        @id: String
         @name: String
-        @image: String
         def initialize: (Hash[untyped, untyped] data) -> void
       end
     end
