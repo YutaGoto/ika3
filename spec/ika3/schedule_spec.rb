@@ -30,6 +30,10 @@ RSpec.describe Ika3::Schedule do
         stub.get('/api/salmon-run/now') do
           [200, {}, JSON.generate(success_response)]
         end
+
+        stub.get('/api/coop-grouping-team-contest/schedule') do
+          [200, {}, JSON.generate(success_response)]
+        end
       end
     end
   end
@@ -114,15 +118,30 @@ RSpec.describe Ika3::Schedule do
       { results: [{ start_time: '2024-05-28T17:00:00+09:00', end_time: '2024-05-30T09:00:00+09:00', boss: { id: 'Q29vcEVuZW15LTI0', name: 'タツ' }, stage: { id: 0, name: 'ムニ・エール海洋発電所', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/high_resolution/f1e4df4cff1dc5e0acc66a9654fecf949224f7e4f6bd36305d4600ac3fa3db7b_0.png?Expires=1736467200&Signature=ELdkRzxxs7HvcI5JDkGn~cLNsel2ZxGetFsQIp9KNO8iagucQluzcJ~tYCXFcpIMB5z9badkgrBcv75CKdQLlmKff~s617ono0nTXTB2XvTRpBLqPifn3AHB8kLKGQEdI9hJuEiG9e88A6JbB4KLpP8E9XWu~7EjNPlYq--CiN~UiSIVrK~4pIL1-42ppjik2~RPbyCMITq2qsIu~LUGIOR2aor2oufClz1TEOf33qvH-C2RlUqa64nqtOi~c0k6PGjmdHb-R4hWAxv2VWjGRcrdKrAq9juqtW4fOoI9BCYQdHW4RRTlijsuCTiXeEpZX6DzwF3mRk1jExqVBv0uzw__&Key-Pair-Id=KNBS2THMRC385' }, weapons: [{ name: 'プロモデラーMG', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/weapon_illust/5ec00bcf96c7a3f731d7a2e67f60f802f33d22f07177b94d5905f471b08b629f_0.png?Expires=1736467200&Signature=Grf8A20qLmtWXzxWWHU7jt7b7uLbiq4-9wyqCoDNHA0GWfr3Uvx~cQJlt~ogG9ifNoaElE8o0PLkNlerDDffRUQ7FsgMvINoQ2RMQ~LIEkpgAPZmyRbBn5gZLj~9LZnfKsziWkSQhOp~OAnRIBKlJHNc~sTwThe6Timh~EOpzck8DaQcHM39OxIVHG4cdzX4Rbq9Grspzf4BXm~V~jqUcgo~LyCyHgfvsKNK7T7pTjK7XxmSIxwkz0Na72rgcQC44FqLstL9vS8MyuLAP1CuawfrGuJB94AXLtzwwhTuwYByfzRbc9GJ-gWKXlWPEe5jYe8AO0zIq0vgaW12Ji~aJg__&Key-Pair-Id=KNBS2THMRC385' }, { name: 'ヴァリアブルローラー', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/weapon_illust/8351e99589f03f49b5d681d36b083aaffd9c486a0558ab957ac44b0db0bb58bb_0.png?Expires=1736467200&Signature=dV7st5IDhppQ00ZJzzFH8E0JLHvFtyg3eVLHU1vu7XdPG3I7gvEtI9U5eEF~Qi1CGTW3hJfbHKbKFfYTEnMYXqx7rF2wcg~CBedLXotDQ5DQudUrKSY1TCZ9WIFgh1Zcn2Hi63STrLz3kVfZtBBst-C~P09723H4Tbl9mqZ8F~3nYpBKVDPCuxPtdV6-p2wDYgEQUb9yxrT~xkae5cd4eOCTSa50JxnIj7KaBSn9cEU6ct3KRHeLYXnqhGjxjDZiGB65CJN8yegicMCrsfVeHvkRhANeXbBbk2-0gSYSRhT6ZL8gzHkaMDET8yOxtKEGDGbbcQvO00cQcYr3dlbb0g__&Key-Pair-Id=KNBS2THMRC385' }, { name: 'クーゲルシュライバー', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/weapon_illust/206dbf3b5dfc9962b6a783acf68a856f0c8fbf0c56257c2ca5c25d63198dd6e1_0.png?Expires=1736467200&Signature=DEmcysSeO0mcWL1ZOKqW3BelB7LkLIYy8chxdLL3fb~ilQxbiQJR8DmsSN62aNO4kSIzAM0Qx9aJUua07gufVCMyQGDAxfsN-FxOyRVXcVcS2WkFXFqJDujXfoS07dX6KOmKFTot~2vfzI2vW~k~cG-x74NYe4Ly~irdKcsLSPMgkq--ltcWt6HGlbu3FsBT2~rfaCbcCgtRi7HmpQbV-WVEAWNV9T7cpddV5fDdsr0Rn59BOSOcYw66Kk6U5Gqwv277ECHZqKxPSOKeWVXLDso6LcvwY~~rmh0xoyRu2bGBniombr085k1lP26IGROl6YFVsoedqLrHbXNIZk~-wQ__&Key-Pair-Id=KNBS2THMRC385' }, { name: 'ラピッドブラスター', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/weapon_illust/0a929d514403d07e1543e638141ebace947ffd539f5f766b42f4d6577d40d7b8_0.png?Expires=1736467200&Signature=l0YG5Y8XtEU3d4WOsE83Wi7qss4beFmJXnGBGuzvhv66HropU4MqVDp8NL4cTjiWFXQyrtIL~w9x1vNw-DlDmc65sAuWEjLoBSo1cfE-efprm9Q0~t-jqVbe6EP0Ouvkebqfn7lG82rFP2eu2bmywWWHH1S7Jbiw9z7t1yPKQSdaA2kZjopp0WCpx4c1BtBBEBdUe9gOZhCbQPN08XVq6cwZpz7lXwHMt9FqG6sSKv6zxRBMfcqByPXCHzBMV-Of4etmPvgQq5X-c1Xuqb1FE~4X7~SjJlKYhG9nBlsKC0isqzoyxCSxpMGqq2AQyFgy9Y3cNCyRipAdRykmEYEXaA__&Key-Pair-Id=KNBS2THMRC385' }], is_big_run: false }] }
     end
 
+    before do
+      allow(Faraday).to receive(:connection).and_return(stub_connection)
+    end
+
     it 'get current salmon run' do
       expect(schedule.salmon_run_now.start_time).not_to be_nil
       expect(schedule.salmon_run_now.weapons.count).to be(4)
+      expect(schedule.salmon_run_now.boss.name).not_to be_empty
     end
   end
 
   describe '#salmon_run_team_contest' do
+    let(:success_response) do
+      { results: [{ start_time: '2024-07-20T09:00:00+09:00', end_time: '2024-07-22T09:00:00+09:00', boss: { id: '', name: '' }, stage: { id: 0, name: 'トキシラズいぶし工房', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/high_resolution/630d89698e3e260ef12cb2a32e1cb2c4c83c0e58fc882762da1fa2cea19a5260_0.png?Expires=1736467200&Signature=sQdV6OZXaSHAON9FAb0JFGxaJH5b3pHd0PBVyT~Dolw7JWgZybELhlCkR3FgZ118dA7FUzA~fjRqKXgfd0Ws1nQH6XUtKRPggckLF-GH7EzsOWqoZca~Bqr7Q893SY5psR-SD74DKMNgwyHV7dvenVuvcUn0NgkPOrucjsmbRS6R9s~i47fWkTx7bhY2FcEZKvhZknuf6h-aOFaPByvlRozsRaRLVUb3schtaAbG2YiaZTFR1WE0bMHSc-9P8ZoPSIz2smLbzQn1aNrMoOXjQSA98-IFRT8jK9vaDmxABJYsHwQXmllbg4x-t4y5U2o~wzJNoGx3WN5Uqm8xjDt0yA__&Key-Pair-Id=KNBS2THMRC385' }, weapons: [{ name: 'N-ZAP85', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/weapon_illust/e6dbf73aa6ff9d1feb61fcabadb2d31e08b228a9736b4f5d8a5baeab9b493255_0.png?Expires=1736467200&Signature=YumohnJpFIKCZfVyQotq-V-w5xwkreUqa0WmcS9yIn8rHzeveWDba0LElUO~ANM~mco7IoWwoWeki~oXYsW2rKPOdIN1YeyVxmOHQgdD78UoSY39MJIwfSUQrnZyrGzbnJyww~BKK8mZ6tno5dzgQHD1mhVPBbNwW00ys5BPU8gN79CBDGC0xLm1a2B~U6ABJ4Vqv-e88BrbVstbZp3uILfXTgOdwQqNcyRUeu3JcsGVO9WHcbfDsHGK~gNqPfLz5k0YmiBVU58ZOSpWuoYJK07Mne~mENnqvQdBnQQspzbXzH93T8hVPjJ4qZnTGg-s5h4bsGXiwsygdaFpnlbCmA__&Key-Pair-Id=KNBS2THMRC385' }, { name: 'カーボンローラー', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/weapon_illust/29358fd25b6ad1ba9e99f5721f0248af8bde7f1f757d00cbbc7a8a6be02a880d_0.png?Expires=1736467200&Signature=S1GRenv~fRlEvAj2YedlX6ZS1oOhd7Gx9c9OL-sC~mrcBufaNNkiOGzc~S7AqorRGZSb7A30z0ODW02nGMv048fWBNukSpbcsUV21Ipv0kHcplChKGDLm2nTmlwqNy-3m~vkAT6LW~csAADVJrWbJk8zVgPNGR1q2kWgiDYgawg5wvnY-RMOGwjbImpnp98Jf9cZwlK2In6NXzSPNI20xEUCgvZiS6Stazc~8Z1jsmyjlbl64Zf6dokNBYZrSW8xZMUifle3LL0-YO2N8r7N6nQPbNNMYqJunJzvJfIUljVLzUvpRMfYISCM1AAjN~KFyoHTDYGrIsZhVyRl0J1dVw__&Key-Pair-Id=KNBS2THMRC385' }, { name: 'ボトルガイザー', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/weapon_illust/db9f2ff8fab9f74c05c7589d43f132eacbff94154dcc20e09c864fced36d4d95_0.png?Expires=1736467200&Signature=kOLJktiPYPiCnEFd3KrB~dz3eXoJonQuoTwnwajSHqSWM2AOh6v33zBU6GPJYqaHZ3z80rlqXnrwqgwG4bH1G~HPV9Q-VTXxBaCUfo-uXynpntKmHL87HRlOhvfePtgkH5TJ4IiEQ0I-DM4dqR9~gfgl6TJLEiNQJ3XAnPpuGBSPaeTlslIQT7Tzpf-qHJbmz5124LmeIqTrBZtf0OrsFObLk1TxnWXIz~OfMD9clKkMWh4LhAVKaGo9yi~U7Gcnv~RgF9A3TygV92dKbE60DkU-ZoWuQY5sDZxigtSQejukNbbLSfHxPR09Iaib8H9qvOt4MxL5poGOoMunZnWF2w__&Key-Pair-Id=KNBS2THMRC385' }, { name: 'キャンピングシェルター', image: 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/weapon_illust/a7b1903741696c0ebeda76c9e16fa0a81ae4e37f5331ad6282fc2be1ae1c1c59_0.png?Expires=1736467200&Signature=Ev4O15rxMgsHqh3qabpiFHAUVjDICECgYCR13l26F0d7ChUHtyr8PoI5q2eHcvV8X07tS-d7AidVeJzXcW1u15z15d8gpvrnTelylsHDrTBvHaEwk1x-W4R5P9d0rRFiMQzBzbAqMAMTJ6f9a3b178X9x2zbdMX-r7xXkACEkKKGCqmZdPyHDmyW13lPlm95KrTRbJidP4Vcpv960nTVR5HfWT-q5RZR5m6BLyUfECUDP5z9vFYsTQUWFQsLUlJrcssXyiKxUGjCQpCkI7LLq8w6T2Sm1NW9uLpiT9G40e~X~V4L9I3zI~j4lJhunhQ3fF468WFXwOnc7zcbK30Olg__&Key-Pair-Id=KNBS2THMRC385' }], is_big_run: false }] }
+    end
+
+    before do
+      allow(Faraday).to receive(:connection).and_return(stub_connection)
+    end
+
     it 'get current salmon run team contest' do
-      expect(schedule.salmon_run_team_contest.stage).to be_nil
+      expect(schedule.salmon_run_team_contest.stage).not_to be_nil
+      expect(schedule.salmon_run_team_contest.weapons.count).to be(4)
+      expect(schedule.salmon_run_team_contest.boss.name).to be_empty
     end
   end
 end
