@@ -28,20 +28,20 @@ module Ika3
           "@salmon_run_#{schedule}", Salmon.new(send_request(:get, "/api/coop-grouping/#{schedule}").body['results'][0])
         )
       end
+    end
 
-      def salmon_run_team_contest
-        return @salmon_run_team_contest unless @salmon_run_team_contest.nil?
+    def salmon_run_team_contest
+      return @salmon_run_team_contest unless @salmon_run_team_contest.nil?
 
-        @salmon_run_team_contest = Salmon.new(
-          send_request(:get, '/api/coop-grouping-team-contest/schedule').body['results'][0]
-        )
-      end
+      @salmon_run_team_contest = Salmon.new(
+        send_request(:get, '/api/coop-grouping-team-contest/schedule').body['results'][0]
+      )
+    end
 
-      def event
-        return @event_match unless @event_match.nil?
+    def event
+      return @event_match unless @event_match.nil?
 
-        @event_match = Battle.new(send_request(:get, '/api/event/schedule').body['results'][0])
-      end
+      @event_match = Battle.new(send_request(:get, '/api/event/schedule').body['results'][0])
     end
 
     class Battle
