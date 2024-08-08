@@ -1,0 +1,9 @@
+extends: default
+
+rules:
+  document-start: disable
+  comments: disable
+
+ignore:
+  - .gem_rbs_collection/
+  - rbs_collection.lock.yaml
