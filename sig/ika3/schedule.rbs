@@ -21,18 +21,20 @@ module Ika3
       @end_time: untyped
       @rule: Rule
       @stages: Array[Stage]
-      @is_fest: untyped
+      @is_fest: bool
+      @is_tricolor: bool
+      @tricolor_stage: Stage?
       def initialize: (Hash[untyped, untyped] data) -> void
 
       class Stage
         @id: untyped
         @name: String
-        @image: untyped
+        @image: String
         def initialize: (Hash[untyped, untyped] data) -> void
       end
 
       class Rule
-        @name: untyped
+        @name: String
         @key: untyped
         def initialize: (Hash[untyped, untyped] data) -> void
       end
@@ -43,7 +45,7 @@ module Ika3
       @end_time: untyped
       @stage: Stage
       @weapons: Array[Weapon]
-      @boss: untyped
+      @boss: Boss?
       def initialize: (Hash[untyped, untyped] data) -> void
 
       class Stage

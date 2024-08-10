@@ -23,7 +23,11 @@ RSpec.describe Ika3::Schedule do
           [200, {}, success_response]
         end
 
-        stub.get('/api/fest/now') do
+        stub.get('/api/fest/next') do
+          [200, {}, success_response]
+        end
+
+        stub.get('/api/fest-challenge/now') do
           [200, {}, success_response]
         end
 
@@ -95,23 +99,44 @@ RSpec.describe Ika3::Schedule do
     end
 
     it 'get current x match' do
-      p schedule.x_now
       expect(schedule.x_now.start_time).not_to be_nil
       expect(schedule.x_now.stages.count).to be(2)
     end
   end
 
-  describe '#fest_now' do
-    let(:success_response) do
-      { 'results' => [{ 'start_time' => '2024-05-17T13:00:00+09:00', 'end_time' => '2024-05-17T15:00:00+09:00', 'rule' => { 'key' => 'TURF_WAR', 'name' => 'ナワバリバトル' }, 'stages' => [{ 'id' => 5, 'name' => 'ナンプラー遺跡', 'image' => 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/f14c2a64e49d243679fc0884af91e1a07dc65600f9b90aefe92d7790dcffb191_1.png?Expires=1736467200&Signature=Gy0f5Uk0h4SloLBrLprURsWPUrX0hcGLd319mIA5W9-R22eyrzMP1IwXMMtSNNrCRtBQWj86jIOO7qChcH~W3QL7gj66zhX6cw-HLC6PMUnF71KlkumQa1jgg7F6pVDkaq4lIxZuI3jM4DYoSZet6foHgrQwzULfc0bh6Voa41x83En6F~Hybs9gDehxTbD6it6uO6f-0C5j6hGvr3IoFvv9q-Gsu0bsd5xKSjnT~Fx32IL~CXzcl46wBr5wGJ3KMXQ~CFZa3hBysJvj-yA31TMs8eokxfxghPPH2eQ8SnxGkbSoUhIyrvDGALRjYQDbX7K0sObsa7WGYHXWwK95tQ__&Key-Pair-Id=KNBS2THMRC385' }, { 'id' => 13, 'name' => '海女美術大学', 'image' => 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/40aba8b36a9439e2d670fde5b3478819ea8a94f9e503b9d783248a5716786f35_1.png?Expires=1736467200&Signature=fCAlEq7s7tze408rj4uhd2IqQHDdz19Oz1ay1bfGRv2mhtjLLNDy2MUtjcA3I9l1IxBzc44TUx27nxmI3LfRL~jc0jFBf5qYcMCFFp51Bvx977SZCKk0MLAcFo8Y23gEaA-3waXhng1aIRfdp17sXeG1BBjOpec1aJ38bdi0N10ZKgOL8464VE5mWnGl7dKodhMfmar~bXvg-qKjRgtj3IuZMamalItWAbQV~2HIYAWXUuikPyAOE-oMvUOH7sDfcH-leQYpI6Nx9naKTDWgEFjGfBZVYkWGgHmk6MpcZZEqW9YMMpxrBdNmGGaLq7ZJylh9O1wc~1I7TUCW-xl4mQ__&Key-Pair-Id=KNBS2THMRC385' }], 'is_fest' => true }] }
-    end
+  describe '#fest_challenge_now' do
+    context 'when not opening fest challenge' do
+      let(:success_response) do
+        { 'results' => [{ 'start_time' => '2024-08-10T21:00:00+09:00', 'end_time' => '2024-08-10T23:00:00+09:00', 'rule' => { 'key' => 'TURF_WAR', 'name' => 'ナワバリバトル' }, 'stages' => [{ 'id' => 11, 'name' => 'キンメダイ美術館', 'image' => 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/b9d8cfa186d197a27e075600a107c99d9e21646d116730f0843e0fff0aaba7dd_1.png?Expires=1736467200&Signature=BWCy8LEUAf8JPkCFoWoKgXAYZQVnGJISByFHNrcHmz0~JKB~h-ZokERpG~UuUDx7zkWwArV47~PVhWaQISURZ9rMrTYVMuJ~~TL0dBR5gJYP4zdGsGBB4KsH2GIfnk5PueiCGYIy3Mri4PoyTNCg-CyRVaW-nGQXqghD1-BW2xc9918ro7kM-EEvkVYAyvk7B~K910z8mmEP0SZTnI0Z546IBV71qQ3tcex0QYvLulqfuSjOugGd5HrsD1CHLQURSGlvyFmRbPEWjzwImubbf5SiaDpTMwh9jV4ow3RbUia76ynzyn325aXJI5iTM~Lj1Xl9~FEInOK-X4mBRKeNKg__&Key-Pair-Id=KNBS2THMRC385' }, { 'id' => 17, 'name' => 'コンブトラック', 'image' => 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/7b3cf118bd9f45d141cd6db0ee75b06e697fa83945c7fe1e6f8483de6a591f5f_1.png?Expires=1736467200&Signature=VcFhGtCf~KlHgukh~YvktaujxYVpqjl-OgBd~c~hvWDQtzQTWsZJHdtY9L15x0Kq~4Yt5lkAbu8Y4h8jt~OQ75eRXTDkpyxKqD8e7yq~V1EXflUirec0xWrneRjtjtEmOwbiB7agezdL5oUQWJV3d3I5evYhAldBCXi7zVx9Yrm37TUgnN4rIhnCHWEDoSNTj9kFI8mPImAgK8b2Qzr84iin~BA7F9t~hLQ8IuvWuHzoKnQ1WttOraJkOvUvI39M6yqpBEDFXhkDahf92Ek7thcVAdsiY0bZDCXIOQSjx1Cw25IN5TuRq~c6V-NjJ1yCYz4KpLdteGwrc4yxsrLMIw__&Key-Pair-Id=KNBS2THMRC385' }], 'is_fest' => true, 'is_tricolor' => false, 'tricolor_stage' => nil }] }
+      end
 
-    before do
-      allow(Faraday).to receive(:new).and_return(stub_connection)
-    end
+      before do
+        allow(Faraday).to receive(:new).and_return(stub_connection)
+      end
 
-    it 'get current fest match' do
-      expect(schedule.fest_now.start_time).not_to be_nil
+      it 'get current fest match' do
+        expect(schedule.fest_challenge_now.start_time).not_to be_nil
+        expect(schedule.fest_challenge_now.stages.count).to be(2)
+        expect(schedule.fest_challenge_now.is_tricolor).to be_falsey
+      end
+    end
+  end
+
+  describe '#fest_next' do
+    context 'when opening tricolor battle' do
+      let(:success_response) do
+        { 'results' => [{ 'start_time' => '2024-08-11T13:00:00+09:00', 'end_time' => '2024-08-11T15:00:00+09:00', 'rule' => { 'key' => 'TURF_WAR', 'name' => 'ナワバリバトル' }, 'stages' => [{ 'id' => 8, 'name' => 'タラポートショッピングパーク', 'image' => 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/f70e9f5af477a39ccfab631bfb81c9e2cedb4cd0947fe260847c214a6d23695f_1.png?Expires=1736467200&Signature=Af8Njk91CeBCbzDcfTB~8t8KGzDYlkqoTMVg5KERUqmeym6VgvStPubSXeQzen~kO0Qk9JHb35-AVEARVS0-HH8HyxX7Xo3fJ3wb~FdBxP7Us7GRZU2TW029XZqR7bOg78WBdEo-Y2URpB6yZGyMIrASC1lGDDzEjXGHpgTK0ToYVp1WxJRUuSomEfIMQsPLKHNimTJUVDbsz3zcoCisgvPUZYJBrmGdu-uxt6X2r0DicG72dG4SIGwW30GwqD9l-ev8dKWt8bsoT~d2H5zhu2k16xqTKfm0mEjedUNcesusZtaZhhlra-1bUaNW0HTbNUVF~z10gq9EDplYdswBjg__&Key-Pair-Id=KNBS2THMRC385' }, { 'id' => 10, 'name' => 'マサバ海峡大橋', 'image' => 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/low_resolution/1db8ab338b64b464df50e7f9e270e59423ff8caac6f09679a24f1b7acf3a82f3_1.png?Expires=1736467200&Signature=M10UmX5dEESMSiX6UP6pt1652485EFFnLPgAv46k06cITKu7S2YQBnj1t8qlZ72lKF8~guYnN2Tg5ogcvIcXcm-94H8nIvNfQocbFg754XMs8TNYp853Vx~YCoR6h0zlRafc~Ougdki~fb8pUwbx5ze9KxwFi1CU4Jd2QWzx3cLCNKZFc7-eabvXOS0fxw~S~sKfysnngcvSN82SHztb2AifB0Kx64i8IJ-8T8P6mi99ytWogLvTSa0H1qRCi3z9giA4Pg9xHVEiNyrt4BSQheFkNN7rm7H-TrsF1A4E03tY7Ytjj9fyXmDEEMI1Ty1EWGArZ4-7BH0ZAQn-3Pubhg__&Key-Pair-Id=KNBS2THMRC385' }], 'is_fest' => true, 'is_tricolor' => true, 'tricolor_stage' => { 'name' => 'ゴンズイ地区', 'image' => 'https://api.lp1.av5ja.srv.nintendo.net/resources/prod/v2/stage_img/icon/high_resolution/898e1ae6c737a9d44552c7c81f9b710676492681525c514eadc68a6780aa52af_0.png?Expires=1736467200&Signature=kxImC-5ODLafZSXW0JwKzMhmUYvG24ZBUwVVp0emJa8FxnFEREnpy9CyZYSGhJt0zuHPvwXXWFzQNpV2~Y-h-cX9bdbeGhXPVIP7Y7CA-O2NMtPIq-4PG4-TTreoJtzGHfGa3ppCd9jOOrx17g0ij3~JDYI~WsEYHpi9B0srv9CdZSZ1FOfHzbiUDyDtEtmMZ~aLgwavOt2jUVDzY4L9s5p1ZAz-dgAgv4CI19cyhmisI7PHZNG1ndF1nprHWsJnZ6M3ei4MVgbA011ajjUQRd~rcWjr~jANARLacDvN9mr~15hRdvujzsNmmANAQMG7hdMp3DaQSKVDqlbns3MTVg__&Key-Pair-Id=KNBS2THMRC385' } }] }
+      end
+
+      before do
+        allow(Faraday).to receive(:new).and_return(stub_connection)
+      end
+
+      it 'get next fest tricolor match' do
+        expect(schedule.fest_next.start_time).not_to be_nil
+        expect(schedule.fest_next.stages.count).to be(2)
+        expect(schedule.fest_next.tricolor_stage.name).not_to be_nil
+      end
     end
   end
 
@@ -141,7 +166,6 @@ RSpec.describe Ika3::Schedule do
     end
 
     it 'get current salmon run team contest' do
-      p schedule.salmon_run_team_contest.stage
       expect(schedule.salmon_run_team_contest.stage).not_to be_nil
       expect(schedule.salmon_run_team_contest.weapons.count).to be(4)
       expect(schedule.salmon_run_team_contest.boss.name).to be_empty
