@@ -6,7 +6,7 @@ module Ika3
       @contact = contact
     end
 
-    modes = %w[regular bankara_challenge bankara_open x fest]
+    modes = %w[regular bankara_challenge bankara_open x fest fest_challenge]
     schedules = %w[now next]
 
     schedules.each do |schedule|
@@ -45,7 +45,7 @@ module Ika3
     end
 
     class Battle
-      attr_reader :start_time, :end_time, :rule, :stages, :is_fest
+      attr_reader :start_time, :end_time, :rule, :stages, :is_fest, :is_tricolor, :tricolor_stage
 
       def initialize(data)
         @start_time = data&.[]('start_time')
@@ -53,6 +53,8 @@ module Ika3
         @rule = Rule.new(data&.[]('rule'))
         @stages = data&.[]('stages')&.map { |stage| Stage.new(stage) }
         @is_fest = data&.[]('is_fest')
+        @is_tricolor = data&.[]('is_tricolor')
+        @tricolor_stage = Stage.new(data&.[]('tricolor_stage'))
       end
 
       class Stage
