@@ -88,7 +88,7 @@ GEM
     rubocop-rbs (0.1.1)
       rbs
       rubocop
-    rubocop-rspec (3.0.4)
+    rubocop-rspec (3.0.5)
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     securerandom (0.3.1)
