@@ -26,8 +26,9 @@ GEM
     csv (3.3.0)
     diff-lcs (1.5.1)
     drb (2.2.1)
-    faraday (2.11.0)
+    faraday (2.12.0)
       faraday-net_http (>= 2.0, < 3.4)
+      json
       logger
     faraday-net_http (3.3.0)
       net-http
@@ -40,7 +41,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    logger (1.6.0)
+    logger (1.6.1)
     minitest (5.25.1)
     mutex_m (0.2.0)
     net-http (0.4.1)
