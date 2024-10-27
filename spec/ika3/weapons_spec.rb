@@ -19,6 +19,12 @@ RSpec.describe Ika3::Weapon do
     end
   end
 
+  describe '#filter_by_special' do
+    it 'get weapon info list from special weapon' do
+      expect(described_class.filter_by_special(special_name).map(&:name)).to include weapon_name
+    end
+  end
+
   describe '#name' do
     it 'get weapon name' do
       expect(described_class.find(key_name).name).to eq weapon_name
