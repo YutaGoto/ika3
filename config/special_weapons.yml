@@ -1,0 +1,56 @@
+big_bubbler: &big_bubbler
+  name: グレートバリア
+
+booyah_bomb: &booyah_bomb
+  name: ナイスダマ
+
+crab_tank: &crab_tank
+  name: カニタンク
+
+ink_storm: &ink_storm
+  name: アメフラシ
+
+ink_vac: &ink_vac
+  name: キューインキ
+
+inkjet: &inkjet
+  name: ジェットパック
+
+killer_wall_5_1: &killer_wall_5_1
+  name: メガホンレーザー5.1ch
+
+kraken_royale: &kraken_royale
+  name: テイオウイカ
+
+reefslider: &reefslider
+  name: サメライド
+
+splattercolor_screen: &splattercolor_screen
+  name: スミナガシート
+
+super_chump: &super_chump
+  name: デコイチラシ
+
+tacticooler: &tacticooler
+  name: エナジースタンド
+
+tenta_missiles: &tenta_missiles
+  name: マルチミサイル
+
+triple_inkstrike: &triple_inkstrike
+  name: トリプルトルネード
+
+triple_splashdown: &triple_splashdown
+  name: ウルトラチャクチ
+
+trizooka: &trizooka
+  name: ウルトラショット
+
+ultra_stamp: &ultra_stamp
+  name: ウルトラハンコ
+
+wave_breaker: &wave_breaker
+  name: ホップソナー
+
+zipcaster: &zipcaster
+  name: ショクワンダー
