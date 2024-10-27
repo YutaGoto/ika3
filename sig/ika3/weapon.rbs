@@ -21,7 +21,7 @@ module Ika3
     def self.config_sub_weapons: -> untyped
     def self.config_special_weapons: -> untyped
     def self.valid?: (Symbol weapon_key) -> bool
-    def self.load_yaml_file: (String file) -> untyped
+    def self.load_yaml: (String file) -> untyped
 
     class W
       @name: String

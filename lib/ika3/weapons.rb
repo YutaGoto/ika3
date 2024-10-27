@@ -94,17 +94,17 @@ module Ika3
       end
 
       def config
-        @config ||= load_yaml_file("#{File.dirname(__FILE__)}/../../config/weapons.yml").deep_symbolize_keys
+        @config ||= load_yaml("#{File.dirname(__FILE__)}/../../config/weapons.yml").deep_symbolize_keys
         @config
       end
 
       def config_sub_weapons
-        @sub_weapons ||= load_yaml_file("#{File.dirname(__FILE__)}/../../config/sub_weapons.yml").deep_symbolize_keys
+        @sub_weapons ||= load_yaml("#{File.dirname(__FILE__)}/../../config/sub_weapons.yml").deep_symbolize_keys
         @sub_weapons
       end
 
       def config_special_weapons
-        @special_weapons ||= load_yaml_file("#{File.dirname(__FILE__)}/../../config/special_weapons.yml").deep_symbolize_keys
+        @special_weapons ||= load_yaml("#{File.dirname(__FILE__)}/../../config/special_weapons.yml").deep_symbolize_keys
         @special_weapons
       end
 
@@ -112,7 +112,7 @@ module Ika3
         names.include?(weapon_key)
       end
 
-      def load_yaml_file(file)
+      def load_yaml(file)
         YAML.safe_load_file(file, aliases: true)
       end
     end
