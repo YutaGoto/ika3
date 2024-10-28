@@ -14,4 +14,4 @@ gem 'typeprof'
 
 gem 'rubocop-rake', '~> 0.6.0'
 gem 'rubocop-rbs', '~> 0.1.1'
-gem 'rubocop-rspec', '~> 3.1'
+gem 'rubocop-rspec', '~> 3.2'
