@@ -6,8 +6,8 @@ module Ika3
     @event_match: Battle
 
     def initialize: (String) -> void
-    def salmon_run_team_contest: -> Salmon
-    def event: -> Battle
+    def salmon_run_team_contest: () -> Salmon
+    def event: () -> Battle
 
     private
 
