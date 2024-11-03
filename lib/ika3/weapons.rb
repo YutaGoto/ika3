@@ -41,12 +41,20 @@ module Ika3
         weapons.map { |weapon| W.new(weapon) }
       end
 
+      def filter_by_special(special_name)
+        raise "unknown special weapon: #{special_name}" unless special_weapons.values.include?(special_name)
+
+        weapons = config.values.filter { |weapon| weapon[:special] == special_name }
+        weapons.map { |weapon| W.new(weapon) }
+      end
+
       def reload_config!
         @cache = {}
         @config = nil
         @sub_weapons = nil
         config
         config_sub_weapons
+        config_special_weapons
       end
 
       private
@@ -75,21 +83,36 @@ module Ika3
         @sub_weapon_hash
       end
 
+      def special_weapons
+        @special_weapon_hash ||= {}
+        if @special_weapon_hash.empty?
+          config_special_weapons.each do |key, value|
+            @special_weapon_hash[key] = value[:name]
+          end
+        end
+        @special_weapon_hash
+      end
+
       def config
-        @config ||= load_yaml_file("#{File.dirname(__FILE__)}/../../config/weapons.yml").deep_symbolize_keys
+        @config ||= load_yaml("#{File.dirname(__FILE__)}/../../config/weapons.yml").deep_symbolize_keys
         @config
       end
 
       def config_sub_weapons
-        @sub_weapons ||= load_yaml_file("#{File.dirname(__FILE__)}/../../config/sub_weapons.yml").deep_symbolize_keys
+        @sub_weapons ||= load_yaml("#{File.dirname(__FILE__)}/../../config/sub_weapons.yml").deep_symbolize_keys
         @sub_weapons
+      end
+
+      def config_special_weapons
+        @special_weapons ||= load_yaml("#{File.dirname(__FILE__)}/../../config/special_weapons.yml").deep_symbolize_keys
+        @special_weapons
       end
 
       def valid?(weapon_key)
         names.include?(weapon_key)
       end
 
-      def load_yaml_file(file)
+      def load_yaml(file)
         YAML.safe_load_file(file, aliases: true)
       end
     end
