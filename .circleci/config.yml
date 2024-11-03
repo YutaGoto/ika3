@@ -118,7 +118,6 @@ workflows:
             - slack-secrets
       - slack:
           requires:
-            - ruby-30-spec
             - ruby-31-spec
             - ruby-32-spec
             - ruby-33-spec
