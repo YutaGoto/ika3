@@ -94,9 +94,6 @@ GEM
       zlib
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rbs (0.1.1)
-      rbs
-      rubocop
     rubocop-rspec (3.2.0)
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
@@ -138,7 +135,6 @@ DEPENDENCIES
   rubocop
   rubocop-on-rbs (~> 1.1)
   rubocop-rake (~> 0.6.0)
-  rubocop-rbs (~> 0.1.1)
   rubocop-rspec (~> 3.2)
   steep
   typeprof
