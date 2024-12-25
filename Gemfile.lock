@@ -39,7 +39,7 @@ GEM
     fileutils (1.7.3)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
-    json (2.9.0)
+    json (2.9.1)
     language_server-protocol (3.17.0.3)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -60,7 +60,7 @@ GEM
       ffi (~> 1.0)
     rbs (3.7.0)
       logger
-    regexp_parser (2.9.3)
+    regexp_parser (2.10.0)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -84,7 +84,7 @@ GEM
       rubocop-ast (>= 1.36.2, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.36.2)
+    rubocop-ast (1.37.0)
       parser (>= 3.3.1.0)
     rubocop-on-rbs (1.2.0)
       rbs (~> 3.5)
@@ -92,7 +92,7 @@ GEM
       zlib
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (3.2.0)
+    rubocop-rspec (3.3.0)
       rubocop (~> 1.61)
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
@@ -134,7 +134,7 @@ DEPENDENCIES
   rubocop
   rubocop-on-rbs (~> 1.2)
   rubocop-rake (~> 0.6.0)
-  rubocop-rspec (~> 3.2)
+  rubocop-rspec (~> 3.3)
   steep
   typeprof
 
