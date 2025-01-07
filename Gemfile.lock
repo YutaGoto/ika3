@@ -35,7 +35,7 @@ GEM
       logger
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
-    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0)
     fileutils (1.7.3)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -139,4 +139,4 @@ DEPENDENCIES
   typeprof
 
 BUNDLED WITH
-   2.3.11
+   2.6.2
