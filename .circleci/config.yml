@@ -74,25 +74,30 @@ jobs:
       name: ruby/default
       tag: "3.3"
     steps: *spec_steps
+  ruby-34-spec:
+    executor:
+      name: ruby/default
+      tag: "3.4"
+    steps: *spec_steps
   cop:
     executor:
       name: ruby/default
-      tag: "3.3"
+      tag: "3.4"
     steps: *cop_steps
   spell-check:
     executor:
       name: python/default
-      tag: "3.12"
+      tag: "3.13"
     steps: *spell_check_steps
   yamllint:
     executor:
       name: python/default
-      tag: "3.12"
+      tag: "3.13"
     steps: *yamllint_steps
   slack:
     executor:
       name: ruby/default
-      tag: "3.2"
+      tag: "3.4"
     steps: *slack_steps
 
 workflows:
@@ -105,6 +110,9 @@ workflows:
           context:
             - slack-secrets
       - ruby-33-spec:
+          context:
+            - slack-secrets
+      - ruby-34-spec:
           context:
             - slack-secrets
       - cop:
