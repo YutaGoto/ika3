@@ -45,7 +45,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    logger (1.6.5)
+    logger (1.6.6)
     minitest (5.25.4)
     net-http (0.6.0)
       uri
@@ -88,7 +88,7 @@ GEM
       unicode-display_width (>= 2.4.0, < 4.0)
     rubocop-ast (1.38.1)
       parser (>= 3.3.1.0)
-    rubocop-on-rbs (1.3.0)
+    rubocop-on-rbs (1.4.2)
       rbs (~> 3.5)
       rubocop (~> 1.61)
       zlib
@@ -135,7 +135,7 @@ DEPENDENCIES
   rbs
   rspec (~> 3.13)
   rubocop
-  rubocop-on-rbs (~> 1.3)
+  rubocop-on-rbs (~> 1.4)
   rubocop-rake (~> 0.6.0)
   rubocop-rspec (~> 3.5)
   steep
