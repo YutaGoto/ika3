@@ -3,6 +3,9 @@ extends: default
 rules:
   document-start: disable
   comments: disable
+  new-line-at-end-of-file:
+    level: warning
+  truthy: disable
 
 ignore:
   - .gem_rbs_collection/
