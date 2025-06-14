@@ -3,7 +3,7 @@
 RSpec.describe Ika3::Weapon do
   let(:weapon) { { name: weapon_name, sub: sub_name, special: special_name } }
   let(:weapon_name) { 'わかばシューター' }
-  let(:sub_name) { 'スプラボム' }
+  let(:sub_name) { 'スプラッシュボム' }
   let(:special_name) { 'グレートバリア' }
   let(:key_name) { :splattershot_jr }
 

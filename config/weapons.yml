@@ -10,7 +10,7 @@ neo_sploosh_o_matic: &neo_sploosh_o_matic
 
 splattershot_jr: &splattershot_jr
   name: わかばシューター
-  sub: スプラボム
+  sub: スプラッシュボム
   special: グレートバリア
 
 custom_splattershot_jr: &custom_splattershot_jr
@@ -28,6 +28,11 @@ neo_splash_o_matic: &neo_splash_o_matic
   sub: キューバンボム
   special: トリプルトルネード
 
+splash_o_matic_gck_o: &splash_o_matic_gck_o
+  name: シャープマーカーGECK
+  sub: ポイズンミスト
+  special: アメフラシ
+
 aerosparay_mg: &aerosparay_mg
   name: プロモデラーMG
   sub: タンサンボム
@@ -38,6 +43,11 @@ aerosparay_rg: &aerosparay_rg
   sub: スプリンクラー
   special: ナイスダマ
 
+solorz_aerosparay: &solorz_aerosparay
+  name: プロモデラー彩
+  sub: クイックボム
+  special: スミナガシート
+
 splattershot: &splattershot
   name: スプラシューター
   sub: キューバンボム
@@ -45,8 +55,13 @@ splattershot: &splattershot
 
 tentatek_splattershot: &tentatek_splattershot
   name: スプラシューターコラボ
-  sub: スプラボム
+  sub: スプラッシュボム
   special: トリプルトルネード
+
+glamorz_splattershot: &glamorz_splattershot
+  name: スプラシューター煌
+  sub: クイックボム
+  special: テイオウイカ
 
 52_gal: &52_gal
   name: .52ガロン
@@ -78,6 +93,11 @@ forge_splattershot_pro: &forge_splattershot_pro
   sub: キューバンボム
   special: ナイスダマ
 
+splattershot_pro_frz_n: &splattershot_pro_frz_n
+  name: プライムシューターFRZN
+  sub: スプラッシュボム
+  special: マルチミサイル
+
 96_gal: &96_gal
   name: .96ガロン
   sub: スプリンクラー
@@ -87,6 +107,11 @@ forge_splattershot_pro: &forge_splattershot_pro
   name: .96ガロンデコ
   sub: スプラッシュシールド
   special: テイオウイカ
+
+clawz_96_gal: &clawz_96_gal
+  name: .96ガロン爪
+  sub: ラインマーカー
+  special: エナジースタンド
 
 jet_squelcher: &jet_squelcher
   name: ジェットスイーパー
@@ -98,6 +123,11 @@ custom_jet_squelcher: &custom_jet_squelcher
   sub: ポイズンミスト
   special: アメフラシ
 
+jet_squelcher_cob_r: &jet_squelcher_cob_r
+  name: ジェットスイーパーCOBR
+  sub: クイックボム
+  special: ウルトラチャクチ
+
 l_3_nozzlenose: &l_3_nozzlenose
   name: L3リールガン
   sub: カーリングボム
@@ -108,6 +138,11 @@ l_3_nozzlenose_d: &l_3_nozzlenose
   sub: クイックボム
   special: ウルトラハンコ
 
+glitterz_l_3_nozzlenose: &glitterz_l_3_nozzlenose
+  name: L3リールガン箔
+  sub: スプラッシュボム
+  special: ジェットパック
+
 h_3_nozzlenose: &h_3_nozzlenose
   name: H3リールガン
   sub: ポイントセンサー
@@ -117,6 +152,11 @@ h_3_nozzlenose_d: &h_3_nozzlenose_d
   name: H3リールガンD
   sub: スプラッシュシールド
   special: グレートバリア
+
+h_3_nozzlenose_vip_r: &h_3_nozzlenose_vip_r
+  name: H3リールガンSNAK
+  sub: キューバンボム
+  special: トリプルトルネード
 
 squeezer: &squeezer
   name: ボトルガイザー
@@ -148,6 +188,11 @@ carbon_roller_deco: &carbon_roller_deco
   sub: クイックボム
   special: ウルトラショット
 
+carbon_roller_ang_l: &carbon_roller_ang_l
+  name: カーボンローラーANGL
+  sub: タンサンボム
+  special: デコイチラシ
+
 splatroller: &splatroller
   name: スプラローラー
   sub: カーリングボム
@@ -167,6 +212,11 @@ gold_dynamo_roller: &gold_dynamo_roller
   name: ダイナモローラーテスラ
   sub: スプラッシュボム
   special: デコイチラシ
+
+starz_dynamo_roller: &starz_dynamo_roller
+  name: ダイナモローラー冥
+  sub: ポイントセンサー
+  special: メガホンレーザー5.1ch
 
 flingza_roller: &flingza_roller
   name: ヴァリアブルローラー
@@ -188,6 +238,11 @@ big_swig_roller_express: &big_swig_roller_express
   sub: ラインマーカー
   special: アメフラシ
 
+planetz_big_swig_roller: &planetz_big_swig_roller
+  name: ワイドローラー惑
+  sub: トーピード
+  special: ウルトラチャクチ
+
 classic_squiffer: &classic_squiffer
   name: スクイックリン
   sub: ポイントセンサー
@@ -200,7 +255,7 @@ new_squiffer: &new_squiffer
 
 splat_charger: &splat_charger
   name: スプラチャージャー
-  sub: スプラボム
+  sub: スプラッシュボム
   special: キューインキ
 
 z_f_splat_charger: &z_f_splat_charger
@@ -208,15 +263,25 @@ z_f_splat_charger: &z_f_splat_charger
   sub: スプラッシュシールド
   special: トリプルトルネード
 
+splat_charger_cam_o: &splat_charger_cam_o
+  name: スプラチャージャーFRST
+  sub: スプリンクラー
+  special: カニタンク
+
 splatterscope: &splatterscope
   name: スプラスコープ
-  sub: スプラボム
+  sub: スプラッシュボム
   special: キューインキ
 
 z_f_splatterscope: &z_f_splatterscope
   name: スプラスコープコラボ
   sub: スプラッシュシールド
   special: トリプルトルネード
+
+splatterscope_cam_o: &splatterscope_cam_o
+  name: スプラスコープFRST
+  sub: スプリンクラー
+  special: カニタンク
 
 e_liter_4k: &e_liter_4k
   name: リッター4K
@@ -237,7 +302,6 @@ custom_e_liter_4k_scope: &custom_e_liter_4k_scope
   name: 4Kスコープカスタム
   sub: ジャンプビーコン
   special: テイオウイカ
-
 
 bamboozler_14_mk_1: &bamboozler_14_mk_1
   name: 14式竹筒銃・甲
@@ -289,6 +353,11 @@ tri_slosher_nouveau: &tri_slosher_nouveau
   sub: タンサンボム
   special: エナジースタンド
 
+tri_slocher_ash_n: &tri_slocher_ash_n
+  name: ヒッセンASH
+  sub: スプラッシュボム
+  special: スミナガシート
+
 sloshing_machine: &sloshing_machine
   name: スクリュースロッシャー
   sub: タンサンボム
@@ -329,6 +398,11 @@ dread_wringer_d: &dread_wringer_d
   sub: ジャンプビーコン
   special: ホップソナー
 
+hornz_dread_wringer: &hornz_dread_wringer
+  name: モップリン角
+  sub: カーリングボム
+  special: カニタンク
+
 mini_splatling: &mini_splatling
   name: スプラスピナー
   sub: クイックボム
@@ -338,6 +412,11 @@ zink_mini_splatling: &zink_mini_splatling
   name: スプラスピナーコラボ
   sub: ポイズンミスト
   special: グレートバリア
+
+mini_splatling_rtl_r: &mini_splatling_rtl_r
+  name: スプラスピナーPYTN
+  sub: ジャンプビーコン
+  special: ウルトラショット
 
 heavy_splatling: &heavy_splatling
   name: バレルスピナー
@@ -358,6 +437,11 @@ custom_hydra_splatling: &custom_hydra_splatling
   name: ハイドラントカスタム
   sub: トラップ
   special: スミナガシート
+
+torrentz_hydra_splatling: &torrentz_hydra_splatling
+  name: ハイドラント圧
+  sub: スプリンクラー
+  special: グレートバリア
 
 ballpoint_splatling: &ballpoint_splatling
   name: クーゲルシュライバー
@@ -391,7 +475,7 @@ heavy_edit_splatling_nouveau: &heavy_edit_splatling_nouveau
 
 luna_blaster: &luna_blaster
   name: ノヴァブラスター
-  sub: スプラボム
+  sub: スプラッシュボム
   special: ショクワンダー
 
 luna_blaster_neo: &luna_blaster_neo
@@ -409,6 +493,11 @@ custom_blaster: &custom_blaster
   sub: ポイントセンサー
   special: ウルトラチャクチ
 
+gleamz_blaster: &gleamz_blaster
+  name: ホットブラスター艶
+  sub: ジャンプビーコン
+  special: カニタンク
+
 range_blaster: &range_blaster
   name: ロングブラスター
   sub: キューバンボム
@@ -421,7 +510,7 @@ custom_range_blaster: &custom_range_blaster
 
 clash_blaster: &clash_blaster
   name: クラッシュブラスター
-  sub: スプラボム
+  sub: スプラッシュボム
   special: ウルトラショット
 
 clash_blaster_neo: &clash_blaster_neo
@@ -448,6 +537,11 @@ rapid_blaster_pro_deco: &rapid_blaster_pro_deco
   name: Rブラスターエリートデコ
   sub: ラインマーカー
   special: メガホンレーザー5.1ch
+
+rapic_blaster_pro_wnt_r: &rapic_blaster_pro_wnt_r
+  name: RブラスターエリートWNTR
+  sub: キューバンボム
+  special: エナジースタンド
 
 s_brast_92: &s_brast_92
   name: S-BRAST92
@@ -479,6 +573,11 @@ tenta_sorella_brella: &tenta_sorella_brella
   sub: トラップ
   special: ウルトラショット
 
+tenta_brella_cre_m: &tenta_brella_cre_m
+  name: キャンピングシェルターCREM
+  sub: ポイズンミスト
+  special: デコイチラシ
+
 recycled_brella_24_mk_1: &recycled_brella_24_mk_1
   name: 24式張替傘・甲
   sub: ラインマーカー
@@ -499,9 +598,14 @@ undercover_sorella_brella: &undercover_sorella_brella
   sub: トーピード
   special: スミナガシート
 
+patternz_undercover_brella: &patternz_undercover_brella
+  name: スパイガジェット繚
+  sub: カーリングボム
+  special: メガホンレーザー5.1ch
+
 inkbrush: &inkbrush
   name: パブロ
-  sub: スプラボム
+  sub: スプラッシュボム
   special: メガホンレーザー5.1ch
 
 inkbrush_nouveas: &inkbrush_nouveas
@@ -519,6 +623,11 @@ octobrush_nouveas: &octobrush_nouveas
   sub: ジャンプビーコン
   special: アメフラシ
 
+cometz_octobrush: &cometz_octobrush
+  name: ホクサイ彗
+  sub: ロボットボム
+  special: テイオウイカ
+
 painbrush: &painbrush
   name: フィンセント
   sub: カーリングボム
@@ -528,6 +637,11 @@ painbrush_nouveas: &painbrush_nouveas
   name: フィンセント・ヒュー
   sub: ポイントセンサー
   special: マルチミサイル
+
+painbrush_brn_z: &painbrush_brn_z
+  name: フィンセントBRNZ
+  sub: スプラッシュシールド
+  special: ウルトラショット
 
 dapple_dualies: &dapple_dualies
   name: スパッタリー
@@ -539,6 +653,11 @@ dapple_dualies_nouveas: &dapple_dualies_nouveas
   sub: トーピード
   special: サメライド
 
+dapple_dualies_noc_t: &dapple_dualies_noc_t
+  name: スパッタリーOWL
+  sub: スプラッシュボム
+  special: メガホンレーザー5.1ch
+
 splat_dualies: &splat_dualies
   name: スプラマニューバー
   sub: キューバンボム
@@ -548,6 +667,11 @@ enperry_splat_dualies: &enperry_splat_dualies
   name: スプラマニューバーコラボ
   sub: カーリングボム
   special: ウルトラチャクチ
+
+twinklez_splat_dualies: &twinklez_splat_dualies
+  name: スプラマニューバー耀
+  sub: タンサンボム
+  special: グレートバリア
 
 dark_tetra_dualies: &dark_tetra_dualies
   name: クアッドホッパーブラック
@@ -561,13 +685,18 @@ light_tetra_dualies: &light_tetra_dualies
 
 dualie_squelchers: &dualie_squelchers
   name: デュアルスイーパー
-  sub: スプラボム
+  sub: スプラッシュボム
   special: ホップソナー
 
 custom_dualie_squelchers: &custom_dualie_squelchers
   name: デュアルスイーパーカスタム
   sub: ジャンプビーコン
   special: デコイチラシ
+
+hoofz_dualie_squelchers: &hoofz_dualie_squelchers
+  name: デュアルスイーパー蹄
+  sub: ポイントセンサー
+  special: スミナガシート
 
 glooga_dualies: &glooga_dualies
   name: ケルビン525
@@ -599,6 +728,11 @@ inkline_tri_stringer: &inkline_tri_stringer
   sub: スプリンクラー
   special: デコイチラシ
 
+bulbz_tri_stringer: &bulbz_tri_stringer
+  name: トライストリンガー燈
+  sub: ラインマーカー
+  special: ジェットパック
+
 reef_lux_450: &reef_lux_450
   name: LACT-450
   sub: カーリングボム
@@ -608,6 +742,11 @@ reef_lux_450_deco: &reef_lux_450_deco
   name: LACT-450デコ
   sub: スプラッシュシールド
   special: サメライド
+
+reef_lux_450_mil_k: &reef_lux_450_mil_k
+  name: LACT-450MILK
+  sub: トーピード
+  special: ナイスダマ
 
 wellstring_v: &wellstring_v
   name: フロイドV
@@ -629,6 +768,11 @@ neo_splatana_stamper: &neo_splatana_stamper
   sub: ポイズンミスト
   special: カニタンク
 
+stickerz_splatana_stamper: &stickerz_splatana_stamper
+  name: ジムワイパー封
+  sub: ロボットボム
+  special: ナイスダマ
+
 splatana_wiper: &splatana_wiper
   name: ドライブワイパー
   sub: トーピード
@@ -638,6 +782,11 @@ splatana_wiper_deco: &splatana_wiper_deco
   name: ドライブワイパーデコ
   sub: ジャンプビーコン
   special: マルチミサイル
+
+splatana_wiper_rus_t: &splatana_wiper_rus_t
+  name: ドライブワイパーRUST
+  sub: カーリングボム
+  special: ウルトラショット
 
 mint_decavitator: &mint_decavitator
   name: デンタルワイパーミント
