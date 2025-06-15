@@ -26,7 +26,7 @@ require "ika3"
 
 ```ruby
 wakaba = Ika3::Weapon.find_by_name("わかばシューター")
-=> {:name=>"わかばシューター", :sub=>"スプラボム", :special=>"グレートバリア"}
+=> {:name=>"わかばシューター", :sub=>"スプラッシュボム", :special=>"グレートバリア"}
 
 wakaba.special
 => "グレートバリア"
@@ -35,15 +35,15 @@ wakaba.special
 ### Get Weapons from Sub-Weapon
 
 ```ruby
-splatbombs = Ika3::Weapon.filter_by_sub("スプラボム")
+splatbombs = Ika3::Weapon.filter_by_sub("スプラッシュボム")
 splatbombs
 =>
-[{:name=>"わかばシューター", :sub=>"スプラボム", :special=>"グレートバリア"},
- {:name=>"スプラチャージャー", :sub=>"スプラボム", :special=>"キューインキ"},
- {:name=>"スプラスコープ", :sub=>"スプラボム", :special=>"キューインキ"},
- {:name=>"ノヴァブラスター", :sub=>"スプラボム", :special=>"ショクワンダー"},
- {:name=>"クラッシュブラスター", :sub=>"スプラボム", :special=>"ウルトラショット"},
- {:name=>"パブロ", :sub=>"スプラボム", :special=>"メガホンレーザー5.1ch"}]
+[{:name=>"わかばシューター", :sub=>"スプラッシュボム", :special=>"グレートバリア"},
+ {:name=>"スプラチャージャー", :sub=>"スプラッシュボム", :special=>"キューインキ"},
+ {:name=>"スプラスコープ", :sub=>"スプラッシュボム", :special=>"キューインキ"},
+ {:name=>"ノヴァブラスター", :sub=>"スプラッシュボム", :special=>"ショクワンダー"},
+ {:name=>"クラッシュブラスター", :sub=>"スプラッシュボム", :special=>"ウルトラショット"},
+ {:name=>"パブロ", :sub=>"スプラッシュボム", :special=>"メガホンレーザー5.1ch"}]
 ```
 
 ### Get Schedule

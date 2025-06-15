@@ -1,5 +1,5 @@
 splat_bomb: &splat_bomb
-  name: スプラボム
+  name: スプラッシュボム
 
 suction_bomb: &suction_bomb
   name: キューバンボム
