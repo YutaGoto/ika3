@@ -1,6 +1,8 @@
-require:
+plugins:
   - rubocop-rspec
   - rubocop-rake
+
+require:
   - rubocop-on-rbs
 
 AllCops:
