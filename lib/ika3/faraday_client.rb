@@ -12,11 +12,11 @@ module Ika3
 
     def get(path)
       response = connection.get(path)
-      raise ApiError, "API Error: #{response.status}" unless response.success?
+      raise Ika3::Error, "API Error: #{response.status}" unless response.success?
 
       Response.new(response)
     rescue Faraday::Error => e
-      raise ApiError, "Connection Error: #{e.message}"
+      raise Ika3::Error, "Connection Error: #{e.message}"
     end
 
     private
