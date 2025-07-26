@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ['you.goto.510@gmail.com']
 
   spec.summary = 'Splatoon3 weapons information library.'
-  spec.description = 'Splatoon3 weapons information library. This gem provide weapon name, sub, and special. not official'
+  spec.description = 'A library to fetch Splatoon 3 weapon information, such as main weapon, sub weapon, and special weapon. Note: This is an unofficial library and not affiliated with Nintendo.'
   spec.homepage = 'https://github.com/YutaGoto/ika3'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1.0'

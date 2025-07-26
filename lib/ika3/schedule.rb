@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
+require_relative 'faraday_client'
+
 module Ika3
   class Schedule
     def initialize(contact)
-      @contact = contact
+      @client = Ika3::FaradayClient.new(contact)
     end
 
     modes = %w[regular bankara_challenge bankara_open x fest fest_challenge]
@@ -14,9 +16,11 @@ module Ika3
         define_method(:"#{mode}_#{schedule}") do
           return instance_variable_get("@#{mode}_#{schedule}") if instance_variable_defined?("@#{mode}_#{schedule}")
 
+          response = @client.get("/api/#{mode.dasherize}/#{schedule}")
+
           instance_variable_set(
             "@#{mode}_#{schedule}",
-            Battle.new(send_request(:get, "/api/#{mode.dasherize}/#{schedule}").body['results'][0])
+            Battle.new(response.body['results'][0])
           )
         end
       end
@@ -24,8 +28,10 @@ module Ika3
       define_method(:"salmon_run_#{schedule}") do
         return instance_variable_get("@salmon_run_#{schedule}") if instance_variable_defined?("@salmon_run_#{schedule}")
 
+        response = @client.get("/api/coop-grouping/#{schedule}")
+
         instance_variable_set(
-          "@salmon_run_#{schedule}", Salmon.new(send_request(:get, "/api/coop-grouping/#{schedule}").body['results'][0])
+          "@salmon_run_#{schedule}", Salmon.new(response.body['results'][0])
         )
       end
     end
@@ -33,15 +39,15 @@ module Ika3
     def salmon_run_team_contest
       return @salmon_run_team_contest unless @salmon_run_team_contest.nil?
 
-      @salmon_run_team_contest = Salmon.new(
-        send_request(:get, '/api/coop-grouping-team-contest/schedule').body['results'][0]
-      )
+      response ||= @client.get('/api/coop-grouping-team-contest/schedule')
+      @salmon_run_team_contest = Salmon.new(response.body['results'][0])
     end
 
     def event
       return @event_match unless @event_match.nil?
 
-      @event_match = Battle.new(send_request(:get, '/api/event/schedule').body['results'][0])
+      response ||= @client.get('/api/event/schedule')
+      @event_match = Battle.new(response.body['results'][0])
     end
 
     class Battle
@@ -123,33 +129,5 @@ module Ika3
     end
 
     private_constant :Battle, :Salmon
-
-    private
-
-    def send_request(method, path)
-      response = splat3_connection.send(method, path)
-      Ika3::Response.new(response)
-    end
-
-    def api_url
-      'https://spla3.yuu26.com/'
-    end
-
-    def splat3_connection
-      @splat3_connection ||= Faraday.new(faraday_options) do |c|
-        c.request :json
-        c.response :json
-        c.adapter Faraday.default_adapter
-      end
-    end
-
-    def faraday_options
-      {
-        url: api_url,
-        headers: {
-          'User-Agent': "Ika3Gem/#{Ika3::VERSION}(#{@contact})"
-        }
-      }
-    end
   end
 end
