@@ -39,15 +39,14 @@ module Ika3
     def salmon_run_team_contest
       return @salmon_run_team_contest unless @salmon_run_team_contest.nil?
 
-      response = @client.get('/api/coop-grouping-team-contest/schedule')
+      response ||= @client.get('/api/coop-grouping-team-contest/schedule')
       @salmon_run_team_contest = Salmon.new(response.body['results'][0])
     end
 
     def event
       return @event_match unless @event_match.nil?
 
-      response = @client.get('/api/event/schedule')
-
+      response ||= @client.get('/api/event/schedule')
       @event_match = Battle.new(response.body['results'][0])
     end
 
