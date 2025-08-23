@@ -26,7 +26,12 @@ def fetch_gem_repo_url(gem_name)
 end
 
 def fetch_release_notes(repo_url, new_version)
-  return 'リリースノートが見つかりませんでした。' unless repo_url.include?('github.com')
+  begin
+    host = URI.parse(repo_url).host
+  rescue URI::InvalidURIError
+    return 'リリースノートが見つかりませんでした。'
+  end
+  return 'リリースノートが見つかりませんでした。' unless host == 'github.com'
 
   repo_path = URI.parse(repo_url).path.sub(%r{^/}, '')
   client = Octokit::Client.new(access_token: GITHUB_TOKEN)
