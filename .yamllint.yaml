@@ -6,6 +6,8 @@ rules:
   new-line-at-end-of-file:
     level: warning
   truthy: disable
+  line-length:
+    max: 120
 
 ignore:
   - .gem_rbs_collection/
