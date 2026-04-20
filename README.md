@@ -1,7 +1,7 @@
 # Ika3
 
 [![RSpec](https://github.com/YutaGoto/ika3/actions/workflows/rspec.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/rspec.yml)
-[![Rubocop](https://github.com/YutaGoto/ika3/actions/workflows/rubocop.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/rubocop.yml)
+[![RuboCop](https://github.com/YutaGoto/ika3/actions/workflows/rubocop.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/rubocop.yml)
 [![Spell Check](https://github.com/YutaGoto/ika3/actions/workflows/spell-check.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/spell-check.yml)
 [![YAML Lint](https://github.com/YutaGoto/ika3/actions/workflows/yaml-lint.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/yaml-lint.yml)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
