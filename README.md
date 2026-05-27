@@ -1,6 +1,9 @@
 # Ika3
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/YutaGoto/ika3/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/YutaGoto/ika3/tree/main)
+[![RSpec](https://github.com/YutaGoto/ika3/actions/workflows/rspec.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/rspec.yml)
+[![RuboCop](https://github.com/YutaGoto/ika3/actions/workflows/rubocop.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/rubocop.yml)
+[![Spell Check](https://github.com/YutaGoto/ika3/actions/workflows/spell-check.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/spell-check.yml)
+[![YAML Lint](https://github.com/YutaGoto/ika3/actions/workflows/yaml-lint.yml/badge.svg)](https://github.com/YutaGoto/ika3/actions/workflows/yaml-lint.yml)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 [![Gem Version](https://badge.fury.io/rb/ika3.svg)](https://badge.fury.io/rb/ika3)
 
