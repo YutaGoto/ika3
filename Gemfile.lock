@@ -133,7 +133,7 @@ GEM
       unicode-emoji (~> 4.1)
     unicode-emoji (4.2.0)
     uri (1.1.1)
-    zlib (3.2.1)
+    zlib (3.2.3)
 
 PLATFORMS
   x86_64-linux
