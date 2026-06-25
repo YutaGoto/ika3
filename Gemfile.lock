@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     ika3 (2.0.0)
-      activesupport (>= 6.0.0)
-      faraday (>= 2.7.0)
+      activesupport (>= 7.2.0)
+      faraday (>= 2.14.0)
 
 GEM
   remote: https://rubygems.org/
@@ -151,4 +151,4 @@ DEPENDENCIES
   typeprof
 
 BUNDLED WITH
-   2.6.2
+   4.0.15
