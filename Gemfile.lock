@@ -105,6 +105,11 @@ GEM
       rubocop (~> 1.86, >= 1.86.2)
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
+    shirobai (2026.0713.1900-x86_64-linux)
+      rubocop (= 1.88.2)
+    shirobai-rspec (2026.0713.1900)
+      rubocop-rspec (= 3.10.2)
+      shirobai (= 2026.0713.1900)
     steep (1.10.0)
       activesupport (>= 5.1)
       concurrent-ruby (>= 1.1.10)
@@ -148,8 +153,10 @@ DEPENDENCIES
   rubocop-on-rbs (~> 1.4)
   rubocop-rake (~> 0.7.1)
   rubocop-rspec (~> 3.10)
+  shirobai
+  shirobai-rspec (>= 2026.0713.1900)
   steep
   typeprof
 
 BUNDLED WITH
-   4.0.15
+  4.0.15

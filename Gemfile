@@ -9,9 +9,11 @@ gem 'rake', '~> 13.4'
 gem 'rbs'
 gem 'rspec', '~> 3.13'
 gem 'rubocop', require: false
+gem 'shirobai', require: false
 gem 'steep'
 gem 'typeprof'
 
 gem 'rubocop-on-rbs', '~> 1.4'
 gem 'rubocop-rake', '~> 0.7.1'
 gem 'rubocop-rspec', '~> 3.10'
+gem 'shirobai-rspec', '>= 2026.0713.1900'

@@ -4,6 +4,7 @@ plugins:
 
 require:
   - rubocop-on-rbs
+  - shirobai
 
 AllCops:
   NewCops: enable
