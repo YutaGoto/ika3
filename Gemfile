@@ -12,6 +12,6 @@ gem 'rubocop', require: false
 gem 'steep'
 gem 'typeprof'
 
-gem 'rubocop-on-rbs', '~> 1.4'
+gem 'rubocop-on-rbs', '~> 2.0'
 gem 'rubocop-rake', '~> 0.7.1'
 gem 'rubocop-rspec', '~> 3.10'
