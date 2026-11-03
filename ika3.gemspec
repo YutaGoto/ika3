@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'A library to fetch Splatoon 3 weapon information, such as main weapon, sub weapon, and special weapon. Note: This is an unofficial library and not affiliated with Nintendo.'
   spec.homepage = 'https://github.com/YutaGoto/ika3'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.1.0'
+  spec.required_ruby_version = '>= 3.2.0'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/YutaGoto/ika3'
