@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ika3 (2.0.0)
+    ika3 (2.0.1)
       activesupport (>= 7.2.0)
       faraday (>= 2.14.0)
 
@@ -158,4 +158,4 @@ DEPENDENCIES
   typeprof
 
 BUNDLED WITH
-   4.0.15
+  4.0.15
